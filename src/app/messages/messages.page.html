@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Messages
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <p>Hello & Welcome to the First Avenu Messages</p>
+            <p>To start a new conversation, select from the options below or begin typing a new message.</p>
+            <p>Please do not share any sensitive account information here, such as account password or expiration dates.</p>
+            <p>this session may be monitored</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="text-align:center">
+        <ion-button color="light" shape="round" size="small">Make a Payment</ion-button>
+        <ion-button color="light" shape="round" size="small">Increase Purchase Power</ion-button>
+        <ion-button color="light" shape="round" size="small">Vacations</ion-button>
+        <ion-button color="light" shape="round" size="small">Special Offers</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-textarea class="message-input" placeholder="Type a message here" rows="1" autocapitalize="off"
+                  #messageInput
+                  (keydown.enter)="sendMessage();false"></ion-textarea>
+    <ion-send-button slot="end">
+      <ion-button (click)="sendMessage()">
+        <ion-icon slot="icon-only" name="send-outline"></ion-icon>
+      </ion-button>
+    </ion-send-button>
+  </ion-toolbar>
+</ion-footer>

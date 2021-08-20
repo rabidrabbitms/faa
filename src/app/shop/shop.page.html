@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Shop
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="welcome-header" >
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h1 style="color:darkblue">Congratulations!</h1>
+          <h4>First Avenu VIP! Where do you want to get started?</h4>
+          <img src="../assets/Prequalify.png" />
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div id="container" style="align-content:center">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h3 style="color:darkblue">Vacations</h3>
+          <img src="../assets/vacation1.png" />
+          <ion-button expand="block" routerLink="vacations">Over 3000 Destinations!</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <h3 style="color:darkblue">Special Offers</h3>
+          <img style="padding-left: 2em" src="../assets/specialoffers.png" />
+          <ion-button expand="block" (click)="specialOffers()">Special Offers Just For You!</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <app-explore-container name="Shop page"></app-explore-container>
+</ion-content>

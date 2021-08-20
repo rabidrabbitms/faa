@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Vacations
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="vacation-welcome" >
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <img src="../assets/Prequalify.png" />
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div id="container" style="align-content:center">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h3 style="color:darkblue">One Week Getaway</h3>
+          <img src="../assets/oneweekgetaway.png" />
+          <ion-button expand="block" routerLink="getaways">Over 3000 Destinations!</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <h3 style="color:darkblue">Ocean Adventure</h3>
+          <img style="padding-left: 2em" src="../assets/oceanadventure.png" />
+          <ion-button expand="block" routerLink="cruises">Cruse The Seas!</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <app-explore-container name="Vacations Page"></app-explore-container>
+</ion-content>

@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Partner Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <h1 style="color:darkblue">Congratulations!</h1>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <h2 style="color:darkblue">Here's Your [vacation.Type] Getaway!</h2>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <img src="../assets/Vectorticket.png" />
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <p style="font-size:xx-small">Certificate Number:</p>
+      <ion-col>
+        <h1>[Certificate Number]</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <p style="font-size:xx-small">Expiration Date:</p>
+      <ion-col>
+        <h1>[Expiration Date]</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col>
+        <p>
+          This certificate entitles you and one companion to 7-nights of resort accommodations (one room based on double occupancy) at one of up to 3000 resorts across the world including: USA & Canada.
+        </p>
+        <p>[[dev note: the above changes based on cruise or vacation chosen.]]</p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <h3>Go Ahead & Register Now</h3>
+      <h1 style="color:'#FF006E'"><a href="tel:1-866-747-4778">1-866-747-4778</a></h1>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <h1>or</h1>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-button color="tertiary" expand="block">Start Registration</ion-button>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <p>Do you want to get the best value out of your [Item] certificate?</p>
+    </ion-row>
+    <ion-row>
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Please Read
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <ion-item-divider></ion-item-divider>
+          <shopread></shopread>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </ion-row>
+    <ion-row>
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Terms & Conditions
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <ion-item-divider></ion-item-divider>
+          <shopterms></shopterms>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,86 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Cruises
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container" style="align-content:center">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h2 style="color:darkblue">Ocean Adventure</h2>
+          <hr />
+          <h3 style="color:darkblue"><strong>Relaxing Cruises</strong></h3>
+          <img src="../assets/cruise.png" />
+        </ion-col>
+      </ion-row>
+      <ion-row style="background:#333184">
+        <ion-col>
+          <ion-col>
+            <img src="../assets/VectorTimer.png" />
+          </ion-col>
+          <ion-col>
+            <span style="color:white"><strong>{{hours}}</strong></span>
+            <span style="color:white"><strong>:{{minutes}}</strong></span>
+            <span style="color:white"><strong>:{{seconds}}</strong></span>
+          </ion-col>
+          <ion-col>
+            <strong style="color:white; font:xx-small"> Limited Availability</strong>
+          </ion-col>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-row>
+            <h4 style="color:darkblue">Great Vacations with Easy Payments</h4>
+          </ion-row>
+          <ion-row>
+            <h5 style="color:darkblue"><strong>5-Day/4-Night Cruise for 2 Adults</strong></h5>
+            <p>Departs from any magor internation airport in the continental United States.</p>
+          </ion-row>
+          <ion-row>
+            <h5 style="color:darkblue"><strong>Ports Including: Port Canaveral, Florida; Miami, Florida or Long Beach, California</strong></h5>
+            <p>Optional upgrades available through our in-house full-service travel agency.</p>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button color="tertiary" expand="block" routerLink="../partners">Check'em Out!</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                How Does It Work?
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ion-item-divider></ion-item-divider>
+            <shophow></shophow>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </ion-row>
+      <ion-row>
+        <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Easy Steps To Take
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ion-item-divider></ion-item-divider>
+            <shopsteps></shopsteps>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <app-explore-container name="Vacations Page"></app-explore-container>
+</ion-content>
