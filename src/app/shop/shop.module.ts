@@ -10,7 +10,6 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { shopPageRoutingModule } from './shop-routing.module';
 import {shopHowPage} from './shared-components/shop.how'
 import { shopStepsPage } from './shared-components/shop.steps'
-import { shopPartnerPage } from './shared-components/shop.partner';
 import { shopRegistrationLandingPage } from './shared-components/shop.registration.landing';
 import { shopReadPage } from './shared-components/shop.read';
 import { shopTermsPage } from './shared-components/shop.terms';
@@ -29,10 +28,10 @@ import { SpecialOffersOrder } from './shop.special-offers-order';
     shopPageRoutingModule,
     MatExpansionModule,
   ],
-  declarations: [shopPage, shopVacationsPage, shopGetawaysPage, shopHowPage, shopStepsPage, shopPartnerPage, shopRegistrationLandingPage, shopReadPage, shopTermsPage, shopCruisesPage, SpecialOffersPage, SpecialOffersOrder
+  declarations: [shopPage, shopVacationsPage, shopGetawaysPage, shopHowPage, shopStepsPage, shopRegistrationLandingPage, shopReadPage, shopTermsPage, shopCruisesPage, SpecialOffersPage, SpecialOffersOrder
 
   ],
-  exports: [shopVacationsPage, shopGetawaysPage, shopHowPage, shopStepsPage, shopPartnerPage, shopRegistrationLandingPage, shopReadPage, shopTermsPage, shopCruisesPage, SpecialOffersPage, SpecialOffersOrder
+  exports: [shopVacationsPage, shopGetawaysPage, shopHowPage, shopStepsPage, shopRegistrationLandingPage, shopReadPage, shopTermsPage, shopCruisesPage, SpecialOffersPage, SpecialOffersOrder
 ]
 })
 export class shopPageModule {}
