@@ -6,6 +6,8 @@ import { shopVacationsPage } from './shop.vacations';
 import { shopPartnerPage } from './shared-components/shop.partner'
 import { shopRegistrationLandingPage } from './shared-components/shop.registration.landing';
 import { shopCruisesPage } from './shop.cruises';
+import { SpecialOffersPage } from './shop.special-offers-page'
+import { SpecialOffersOrder } from './shop.special-offers-order';
 
 const routes: Routes = [
   {
@@ -31,6 +33,14 @@ const routes: Routes = [
   {
     path: 'cruises',
     component: shopCruisesPage
+  },
+  {
+    path: 'shop-special-offers-page',
+    component: SpecialOffersPage
+  },
+  {
+    path: 'shop-special-offers-order',
+    component: SpecialOffersOrder
   }
 ];
 

@@ -15,6 +15,8 @@ import { shopRegistrationLandingPage } from './shared-components/shop.registrati
 import { shopReadPage } from './shared-components/shop.read';
 import { shopTermsPage } from './shared-components/shop.terms';
 import { shopCruisesPage } from './shop.cruises';
+import { SpecialOffersPage } from './shop.special-offers-page'
+import { SpecialOffersOrder } from './shop.special-offers-order';
 
 
 
@@ -27,9 +29,10 @@ import { shopCruisesPage } from './shop.cruises';
     shopPageRoutingModule,
     MatExpansionModule,
   ],
-  declarations: [shopPage, shopVacationsPage, shopGetawaysPage, shopHowPage, shopStepsPage, shopPartnerPage, shopRegistrationLandingPage, shopReadPage, shopTermsPage,shopCruisesPage
-],
-  exports: [shopVacationsPage, shopGetawaysPage, shopHowPage, shopStepsPage, shopPartnerPage, shopRegistrationLandingPage, shopReadPage, shopTermsPage, shopCruisesPage
+  declarations: [shopPage, shopVacationsPage, shopGetawaysPage, shopHowPage, shopStepsPage, shopPartnerPage, shopRegistrationLandingPage, shopReadPage, shopTermsPage, shopCruisesPage, SpecialOffersPage, SpecialOffersOrder
+
+  ],
+  exports: [shopVacationsPage, shopGetawaysPage, shopHowPage, shopStepsPage, shopPartnerPage, shopRegistrationLandingPage, shopReadPage, shopTermsPage, shopCruisesPage, SpecialOffersPage, SpecialOffersOrder
 ]
 })
 export class shopPageModule {}

@@ -8,7 +8,9 @@ import { Router } from '@angular/router';
 })
 export class shopPage {
 
-  constructor(private router: Router) { }
+  constructor(
+    public router: Router
+  ) { }
 
 
 }
