@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="back()"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-text color="primary">
+    <h1>My Vacations</h1>
+  </ion-text>
+  <ion-card>
+    <ion-row>
+      <ion-col>
+        <ion-row class="ion-justify-content-center">
+          <img src="../assets/VacationInfo.svg" />
+        </ion-row>
+        <ion-card>
+          <ion-row>
+            <ion-col>
+              <ion-row class="ion-justify-content-center">
+                <ion-text color="primary">
+                  <h1>[Vacation Type]</h1>
+                </ion-text>
+              </ion-row>
+              <ion-row class="ion-justify-content-center">
+                <ion-text color="primary">
+                  <h2>Purchased:[date]</h2>
+                </ion-text>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-row class="ion-justify-content-center">
+                <ion-text color="primary">
+                  <h5>Certificate Number:</h5>
+                </ion-text>
+              </ion-row>
+            </ion-col>
+            <ion-col>
+              <ion-text color="primary">
+                <h5>[Number]</h5>
+              </ion-text>
+            </ion-col>
+            <ion-col>
+              <ion-text color="primary">
+                <h5>Expiration Date:</h5>
+              </ion-text>
+            </ion-col>
+            <ion-col>
+              <ion-text color="primary">
+                <h5>[Date]</h5>
+              </ion-text>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-row class="ion-justify-content-center">
+                <ion-button color="tertiary">
+                  <ion-text>Redeem Now</ion-text>
+                </ion-button>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <app-explore-container name="account page"></app-explore-container>
+</ion-content>

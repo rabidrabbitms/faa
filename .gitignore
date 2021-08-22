@@ -29,3 +29,4 @@
 # /platforms
 # /plugins
 # /www
+/node_modules/@havesource/cordova-plugin-push

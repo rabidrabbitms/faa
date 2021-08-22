@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { shopGetawaysPage } from './shop.getaways';
 import { shopPage } from './shop.page';
 import { shopVacationsPage } from './shop.vacations';
-import { shopPartnerPage } from './shared-components/shop.partner'
 import { shopRegistrationLandingPage } from './shared-components/shop.registration.landing';
 import { shopCruisesPage } from './shop.cruises';
 import { SpecialOffersPage } from './shop.special-offers-page'
-import { SpecialOffersOrder } from './shop.special-offers-order';
+import { PrequalifyLandingPage } from './prequalification/prequalify.landing';
+import { PrequalifyTermsPage } from './prequalification/prequalify.terms';
+import { PrequalifyIncomePage } from './prequalification/prequalify.income';
+import { PrequalifyFinalizePage } from './prequalification/prequalify.finalize';
 
 const routes: Routes = [
   {
@@ -23,10 +25,6 @@ const routes: Routes = [
     component: shopGetawaysPage
   },
   {
-    path: 'partners',
-    component: shopPartnerPage
-  },
-  {
     path: 'registration-landing',
     component: shopRegistrationLandingPage
   },
@@ -39,8 +37,20 @@ const routes: Routes = [
     component: SpecialOffersPage
   },
   {
-    path: 'shop-special-offers-order',
-    component: SpecialOffersOrder
+    path: 'prequalify',
+    component: PrequalifyLandingPage
+  },
+  {
+    path: 'prequalify-terms',
+    component: PrequalifyTermsPage
+  },
+  {
+    path: 'prequalify-income',
+    component: PrequalifyIncomePage
+  },
+  {
+    path: 'prequalify-finalize',
+    component: PrequalifyFinalizePage
   }
 ];
 

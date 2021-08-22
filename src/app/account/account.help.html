@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="back()"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-text color="primary">
+    <h1>Help!</h1>
+  </ion-text>
+  <ion-card>
+    <ion-row>
+      <ion-col>
+        <ion-row class="ion-justify-content-center">
+          <img src="../assets/Help.svg" />
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button expand="full" color="light" routerLink="../../messages">
+              <ion-text>Message Us</ion-text>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button expand="full" color="light">
+              <ion-text>Email Us</ion-text>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button expand="full" color="light">
+              <ion-text>Call Us -9am-11PM EST. M-F</ion-text>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button expand="full" color="light" >
+              <ion-text>FAQs</ion-text>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <app-explore-container name="account page"></app-explore-container>
+</ion-content>

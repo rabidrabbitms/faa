@@ -1,8 +1,8 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Vacations
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button routerLink="../../shop"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -11,7 +11,9 @@
     <ion-grid>
       <ion-row>
         <ion-col>
-          <img src="../assets/Prequalify.png" />
+          <ion-card class="welcome-card" [routerLink]="['prequalify']">
+            <img src="../assets/Prequalify.png" />
+          </ion-card>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -21,15 +23,15 @@
       <ion-row>
         <ion-col>
           <h3 style="color:darkblue">One Week Getaway</h3>
-          <img src="../assets/oneweekgetaway.png" />
-          <ion-button expand="block" routerLink="getaways">Over 3000 Destinations!</ion-button>
+          <img src="../assets/OneWeekGetaway.svg" />
+          <ion-button expand="block" routerLink="../getaways">Over 3000 Destinations!</ion-button>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
           <h3 style="color:darkblue">Ocean Adventure</h3>
-          <img style="padding-left: 2em" src="../assets/oceanadventure.png" />
-          <ion-button expand="block" routerLink="cruises">Cruse The Seas!</ion-button>
+          <img style="padding-left: 2em" src="../assets/OceanAdventure.svg" />
+          <ion-button expand="block" routerLink="../cruises">Cruse The Seas!</ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>

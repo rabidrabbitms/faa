@@ -14,17 +14,7 @@ export class SpecialOffersPage implements OnInit {
   public hours: number;
   public days: number;
 
-  private accordion_expanded = false;
-  private items = [
-    { 'name': 'item 1' },
-    { 'name': 'item 2' },
-    { 'name': 'item 3' },
-    { 'name': 'item 4' },
-    { 'name': 'item 5' },
-    { 'name': 'item 6' },
-    { 'name': 'item 7' },
-    { 'name': 'item 8' }
-  ]
+
   constructor(public alertController: AlertController
   ) { }
 
@@ -42,10 +32,30 @@ export class SpecialOffersPage implements OnInit {
     this.minutes = minutes;
     this.hours = hours;
     this.days = days;
+    setTimeout(() => { this.showAlert(); }, 1000);
   }
-  private toggle_accordion() {
-    this.accordion_expanded = this.accordion_expanded === false;
+  async showAlert() {
+    const alert = await this.alertController.create({
+      header: 'Special Offers Page',
+      message: `<ul>
+      <li>Is the image area supposed to alternate between products or be images of the same product from differing views.</li>
+      <li>If it's supposed to be differing views IT needs the full photo deck.</li>
+      <li>If it's supposed to be alternating between products that doesn't make sense and like the vacations page there should be a page between here and the shop landing that shows the products.</li>
+      <li>The only difference between this and the next screen in the deck is the button now says order now instead of apply. One assumes that if the user has purchasing power equal or greater than the cost of the
+          item then it would just say order, is there no increase button? like if the user has applied but their PP is too small there would be a button to request an increase.</li>
+    </ul>`,
+      buttons: ['OK']
+    });
+
+    await alert.present();
   }
-
-
+  async showAlert2() {
+      const alert = await this.alertController.create({
+        header: 'Congratulations!',
+        subHeader: 'Your product will be available at your neighborhood [STORE BRAND], [STORE ADDRESS]',
+        message: 'They will call you when its ready!',
+        buttons: ['OK']
+      });
+    await alert.present();
+  }
 }

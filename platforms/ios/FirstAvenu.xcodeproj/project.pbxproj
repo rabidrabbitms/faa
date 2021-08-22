@@ -24,6 +24,9 @@
 		48949BE556844E18850997E4 /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4317DE55B84CB3BD76DFD8 /* CDVSplashScreen.m */; };
 		F88F90F974024B26AD1CDF90 /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = CBFE22C9BD4C4199ABCA000E /* CDVViewController+SplashScreen.m */; };
 		A9288A9B31D1484A95FD065B /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DD9BDAC84941E08B644D5B /* CDVStatusBar.m */; };
+		6CE11AE6229B432596238663 /* AppDelegate+notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FAD54DFC6E420E96916BF7 /* AppDelegate+notification.m */; };
+		9E8F44C9483F48B7AF1D442E /* PushPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8D18FC59994068A7091B7D /* PushPlugin.m */; };
+		3C0FF7F280094EFD810AEF17 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4506D1D31B438C99CB4665 /* PushKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +93,11 @@
 		D9FD056CA79E48DE80455D48 /* CDVViewController+SplashScreen.h */ = {isa = PBXFileReference; name = "CDVViewController+SplashScreen.h"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		B4DD9BDAC84941E08B644D5B /* CDVStatusBar.m */ = {isa = PBXFileReference; name = "CDVStatusBar.m"; path = "cordova-plugin-statusbar/CDVStatusBar.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		7A273BAC00754756BDA915ED /* CDVStatusBar.h */ = {isa = PBXFileReference; name = "CDVStatusBar.h"; path = "cordova-plugin-statusbar/CDVStatusBar.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		20FAD54DFC6E420E96916BF7 /* AppDelegate+notification.m */ = {isa = PBXFileReference; name = "AppDelegate+notification.m"; path = "@havesource/cordova-plugin-push/AppDelegate+notification.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		0F8D18FC59994068A7091B7D /* PushPlugin.m */ = {isa = PBXFileReference; name = "PushPlugin.m"; path = "@havesource/cordova-plugin-push/PushPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		0D8577324FB1474581A71D84 /* AppDelegate+notification.h */ = {isa = PBXFileReference; name = "AppDelegate+notification.h"; path = "@havesource/cordova-plugin-push/AppDelegate+notification.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		09CB32209E4A4D79AD63D496 /* PushPlugin.h */ = {isa = PBXFileReference; name = "PushPlugin.h"; path = "@havesource/cordova-plugin-push/PushPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		AB4506D1D31B438C99CB4665 /* PushKit.framework */ = {isa = PBXFileReference; name = "PushKit.framework"; path = "System/Library/Frameworks/PushKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,7 @@
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				03ABD16C56944AC59FF47776 /* WebKit.framework in Frameworks */,
+				3C0FF7F280094EFD810AEF17 /* PushKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				DC414D02C5B54A18BC0CF035 /* WebKit.framework */,
+				AB4506D1D31B438C99CB4665 /* PushKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -214,6 +224,10 @@
 				D9FD056CA79E48DE80455D48 /* CDVViewController+SplashScreen.h */,
 				B4DD9BDAC84941E08B644D5B /* CDVStatusBar.m */,
 				7A273BAC00754756BDA915ED /* CDVStatusBar.h */,
+				20FAD54DFC6E420E96916BF7 /* AppDelegate+notification.m */,
+				0F8D18FC59994068A7091B7D /* PushPlugin.m */,
+				0D8577324FB1474581A71D84 /* AppDelegate+notification.h */,
+				09CB32209E4A4D79AD63D496 /* PushPlugin.h */,
 			);
 			name = Plugins;
 			path = "FirstAvenu/Plugins";
@@ -351,6 +365,8 @@
 				48949BE556844E18850997E4 /* CDVSplashScreen.m in Sources */,
 				F88F90F974024B26AD1CDF90 /* CDVViewController+SplashScreen.m in Sources */,
 				A9288A9B31D1484A95FD065B /* CDVStatusBar.m in Sources */,
+				6CE11AE6229B432596238663 /* AppDelegate+notification.m in Sources */,
+				9E8F44C9483F48B7AF1D442E /* PushPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

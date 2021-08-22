@@ -25,6 +25,11 @@
     },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "@havesource/cordova-plugin-push": {
+      "ANDROID_SUPPORT_V13_VERSION": "28.0.0",
+      "FCM_VERSION": "18.+",
+      "PACKAGE_NAME": "io.ionic.starter"
     }
   },
   "dependent_plugins": {}

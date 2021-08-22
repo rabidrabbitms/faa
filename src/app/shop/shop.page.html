@@ -13,7 +13,9 @@
         <ion-col>
           <h1 style="color:darkblue">Congratulations!</h1>
           <h4>First Avenu VIP! Where do you want to get started?</h4>
-          <img src="../assets/Prequalify.png" />
+          <ion-card class="welcome-card" [routerLink]="['prequalify']">
+            <img src="../assets/Prequalify.png" />
+          </ion-card>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -23,14 +25,14 @@
       <ion-row>
         <ion-col>
           <h3 style="color:darkblue">Vacations</h3>
-          <img src="../assets/vacation1.png" />
+          <img src="../assets/Vacation1.svg" />
           <ion-button expand="block" routerLink="vacations">Over 3000 Destinations!</ion-button>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
           <h3 style="color:darkblue">Special Offers</h3>
-          <img style="padding-left: 2em" src="../assets/specialoffers.png" />
+          <img style="padding-left: 2em" src="../assets/SpecialOffers.svg" />
           <ion-button expand="block" routerLink="shop-special-offers-page">Special Offers Just For You!</ion-button>
         </ion-col>
       </ion-row>

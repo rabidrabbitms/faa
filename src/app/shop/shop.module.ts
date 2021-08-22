@@ -15,7 +15,10 @@ import { shopReadPage } from './shared-components/shop.read';
 import { shopTermsPage } from './shared-components/shop.terms';
 import { shopCruisesPage } from './shop.cruises';
 import { SpecialOffersPage } from './shop.special-offers-page'
-import { SpecialOffersOrder } from './shop.special-offers-order';
+import { PrequalifyLandingPage } from './prequalification/prequalify.landing';
+import { PrequalifyTermsPage } from './prequalification/prequalify.terms';
+import { PrequalifyIncomePage } from './prequalification/prequalify.income';
+
 
 
 
@@ -28,10 +31,10 @@ import { SpecialOffersOrder } from './shop.special-offers-order';
     shopPageRoutingModule,
     MatExpansionModule,
   ],
-  declarations: [shopPage, shopVacationsPage, shopGetawaysPage, shopHowPage, shopStepsPage, shopRegistrationLandingPage, shopReadPage, shopTermsPage, shopCruisesPage, SpecialOffersPage, SpecialOffersOrder
+  declarations: [shopPage, shopVacationsPage, shopGetawaysPage, shopHowPage, shopStepsPage, shopRegistrationLandingPage, shopReadPage, shopTermsPage, shopCruisesPage, SpecialOffersPage, PrequalifyLandingPage, PrequalifyTermsPage, PrequalifyIncomePage
 
   ],
-  exports: [shopVacationsPage, shopGetawaysPage, shopHowPage, shopStepsPage, shopRegistrationLandingPage, shopReadPage, shopTermsPage, shopCruisesPage, SpecialOffersPage, SpecialOffersOrder
+  exports: [shopVacationsPage, shopGetawaysPage, shopHowPage, shopStepsPage, shopRegistrationLandingPage, shopReadPage, shopTermsPage, shopCruisesPage, SpecialOffersPage, PrequalifyLandingPage, PrequalifyTermsPage, PrequalifyIncomePage
 ]
 })
 export class shopPageModule {}

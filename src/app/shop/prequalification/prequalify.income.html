@@ -1,0 +1,105 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="back()"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-row>
+          <ion-col>
+            <ion-row>
+              <p>Complete thie form to find out how much you pre-qualify for!</p>
+            </ion-row>
+            <ion-row>
+              <ion-label><ion-icon name="alert-circle-outline"></ion-icon>Pay Cycle</ion-label>
+            </ion-row>
+            <ion-row>
+              <select class="incomeSelect">
+                <option style="opacity:.5">Pay Schedule Type</option>
+              </select>
+            </ion-row>
+            <ion-row>
+              <ion-item>
+                <ion-datetime value="" placeholder="Next Pay Date"></ion-datetime>
+              </ion-item>
+            </ion-row>
+            <ion-row>
+              <ion-item>
+                <ion-datetime value="" placeholder="Pay Date After Next"></ion-datetime>
+              </ion-item>
+            </ion-row>
+            <ion-row>
+              <ion-label><ion-icon name="alert-circle-outline"></ion-icon>Net Monthly Income</ion-label>
+            </ion-row>
+            <ion-row>
+              <ion-input typeof="transaction-amount" placeholder="Enter Take Home Pay"></ion-input>
+            </ion-row>
+            <ion-row>
+              <select class="incomeSelect">
+                <option style="opacity:.5">Income Type</option>
+              </select>
+            </ion-row>
+            <ion-row style="padding-top:1em;">
+              <ion-col>
+                <ion-checkbox></ion-checkbox> <ion-label style="padding-left: .5em; font-size: small;">Primary Income</ion-label>
+              </ion-col>
+              <ion-col>
+                <ion-checkbox></ion-checkbox> <ion-label style="padding-left: .5em; font-size: small;">Direct Deposit</ion-label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <select class="incomeSelect">
+                <option>Do you use a Pay/Debit Card for banking</option>
+                <option>Yes?</option>
+                <option>No?</option>
+                <option>Maybe?</option>
+              </select>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-card>
+    <ion-card>
+      <ion-row>
+        <ion-col>
+          <ion-row>
+            <p>
+              Please enter your bank routing number (9-digit number) and account information. Your data is protected with bank-level security.
+            </p>
+          </ion-row>
+          <ion-row>
+            <ion-input placeholder="Enter Routing Number"></ion-input>
+          </ion-row>
+          <ion-row>
+            <ion-input placeholder="Enter Bank Name"></ion-input>
+          </ion-row>
+          <ion-row>
+            <select class="incomeSelect">
+              <option style="opacity:.5">Choose Account Type</option>
+              <option style="opacity:.5">Checking</option>
+              <option style="opacity:.5">Savings</option>
+            </select>
+          </ion-row>
+          <ion-row>
+            <ion-input placeholder="Enter Account Number"></ion-input>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-row>
+    </ion-row>
+  </ion-card>
+  <ion-row class="ion-justify-content-center">
+    <ion-button color="tertiary" routerLink="../prequalify-finalize">Pre-Qualify Me!</ion-button>
+  </ion-row>
+  <ion-row class="ion-justify-content-center" style="padding-top:1em">
+    <p>This will not affect your credit score!</p>
+  </ion-row>
+</ion-content>

@@ -24,6 +24,10 @@
     },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "@havesource/cordova-plugin-push": {
+      "IOS_FIREBASE_MESSAGING_VERSION": "~> 6.32.2",
+      "PACKAGE_NAME": "io.ionic.starter"
     }
   },
   "dependent_plugins": {}

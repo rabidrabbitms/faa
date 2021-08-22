@@ -24,6 +24,7 @@ const routes: Routes = [
         path: 'account',
         loadChildren: () => import('../account/account.module').then(m => m.accountPageModule)
       },
+     
       {
         path: '',
         redirectTo: '/tabs/shop',
@@ -33,7 +34,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/tabs/shop',
+    redirectTo: './login/login.module',
     pathMatch: 'full'
   }
 ];

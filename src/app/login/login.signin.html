@@ -1,0 +1,39 @@
+<ion-content>
+  <ion-col>
+    <ion-row class="ion-justify-content-center" style="padding-top:.25em">
+      <img class="chat1" src="../assets/LookyTalkSignIn.svg" />
+    </ion-row>
+    <ion-row class="ion-justify-content-center" style="padding:0em">
+      <img class="looky" src="../assets/Lookylooky.svg" />
+      <img class="marquee" src="../assets/FirstAvenulogin.svg" style="padding-top:5px" />
+      <ion-button color="tertiary" expand="block" style="padding-top:0em">Get Started!</ion-button>
+    </ion-row>
+    <ion-row style="padding:0em">
+      <ion-col style="padding:0em">
+        <ion-card>
+          <ion-row>
+            <ion-col>
+              <ion-input inputmode="username" typeof="email" max="100" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})" style="border-bottom:1px solid lightgrey;" placeholder="Email">
+              </ion-input>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-input typeof="current-password" min="8" max="100" style="border-bottom:1px solid lightgrey;" placeholder="Password">
+              </ion-input>
+            </ion-col>
+          </ion-row>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center"  style="padding-top:.25em">
+      Forgot your sign in?
+    </ion-row>
+    <ion-row class="ion-justify-content-center"  style="padding-top:.25em">
+      <ion-button color="tertiary" expand="block" style="padding-top:0em" routerLink="../tabs/tabs/shop">Log In</ion-button>
+    </ion-row>
+    <ion-row class="ion-justify-content-center"  style="padding-top:.25em">
+      <p>Don't Have an account? <a href="app-login-register">Register here</a></p>
+    </ion-row>
+  </ion-col>
+</ion-content>

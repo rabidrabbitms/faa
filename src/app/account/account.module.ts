@@ -7,6 +7,11 @@ import { accountPage } from './account.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { accountPageRoutingModule } from './account-routing.module';
+import { accountInfo } from './account.info';
+import { accountVacations } from './account.vacations';
+import { accountRefer } from './account.refer';
+import { accountCoupons } from './account.coupons';
+import { accountHelp } from './account.help';
 
 @NgModule({
   imports: [
@@ -17,6 +22,6 @@ import { accountPageRoutingModule } from './account-routing.module';
     RouterModule.forChild([{ path: '', component: accountPage }]),
     accountPageRoutingModule,
   ],
-  declarations: [accountPage]
+  declarations: [accountPage, accountInfo, accountVacations, accountRefer, accountCoupons, accountHelp]
 })
 export class accountPageModule {}

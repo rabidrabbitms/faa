@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="back()"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row>
+    <ion-col>
+      <ion-row class="ion-justify-content-center">
+        <ion-text color="primary"><h3><strong>You qualify for First Avenu puchases up to:</strong></h3></ion-text>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-text><h1><strong>$XX,XXX.XX</strong></h1></ion-text>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-text color="primary"><h3><strong>You've Never Had Purchasing Power Like This:</strong></h3></ion-text>
+      </ion-row>
+      <ion-row>
+        <ion-text color="primary">
+          <ul>
+            <li>No interest payments</li>
+            <li>Affordable payments tied to your pay cycle.</li>
+            <li>Flexible, only purchase what you want, when you want it.</li>
+            <li>Quick Access to purchases. Up to your prequalified purchasing amount.No Application needed.</li>
+          </ul>
+        </ion-text>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-text color="primary"><h3><strong>You are just a click away from more flexible purchases to suit your lifestyle.</strong></h3></ion-text>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-button color="tertiary" (click)="routeHome()">Yes! I want my FA Purchasing Power!</ion-button>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</ion-content>

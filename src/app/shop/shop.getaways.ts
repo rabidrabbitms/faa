@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Animation, AnimationController, AlertController } from '@ionic/angular';
 
 
 @Component({
@@ -14,18 +15,9 @@ export class shopGetawaysPage implements OnInit {
   public hours: number;
   public days: number;
 
-  private accordion_expanded = false;
-  private items = [
-    { 'name': 'item 1' },
-    { 'name': 'item 2' },
-    { 'name': 'item 3' },
-    { 'name': 'item 4' },
-    { 'name': 'item 5' },
-    { 'name': 'item 6' },
-    { 'name': 'item 7' },
-    { 'name': 'item 8' }
-  ]
-  constructor() {  }
+  
+  constructor(private animationCtrl: AnimationController,
+    public alertController: AlertController) {  }
 
   ngOnInit() {
 
@@ -41,8 +33,20 @@ export class shopGetawaysPage implements OnInit {
     this.minutes = minutes;
     this.hours = hours;
     this.days = days;
+    setTimeout(() => { this.showAlert(); }, 1000);
   }
-  private toggle_accordion() {
-    this.accordion_expanded = this.accordion_expanded === false;
+  async showAlert() {
+    const alert = await this.alertController.create({
+      header: 'Resort Page',
+      message: `<ul>
+      <li> This image is very blury at this resoloution</li>
+      <li>The count down will be built to actually count down from the back end. </li>
+      <li>Is there a page in between here and the next? in the documents given to IT it jumps from here to the confirmation page. (scroll for more)</li>
+      <li> are images / sections in the easy steps to take section supposed to lead to a corresponding action? </li>
+    </ul>`,
+      buttons: ['OK']
+    });
+
+    await alert.present();
   }
 }
