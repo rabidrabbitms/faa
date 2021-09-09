@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, HostListener, ElementRef, AfterViewInit } from '@angular/core';
+import SignaturePad from 'signature_pad';
 
 @Component({
   selector: 'agreement-signature',
