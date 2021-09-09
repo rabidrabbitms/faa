@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button routerLink="../vacations"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="6">
+        <img src="../assets/Lookylooky.svg" />
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <h1 style="color:darkblue">Congratulations! [firstName],</h1>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-text class="body-body">
+        Please review your agreement to make [Payment number] easy payments of [Payment amount], based on your pay schedule.
+      </ion-text>
+    </ion-row>
+    <ion-row class="ion-justify-content-center" style="margin:1em;">
+      <ion-text class="body-body">(You’re just a few clicks away!)</ion-text>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card style="border: 1px solid rgba(20, 27, 65, 1); height:200px">
+          <h2>[Contract Info]</h2>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col>
+        <ion-button color="tertiary" expand="full" routerLink="../registration-landing">Accept Agreement</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+        <a href="">Payday schedule not correct? click here.</a>
+    </ion-row>
+  </ion-grid>
+</ion-content>

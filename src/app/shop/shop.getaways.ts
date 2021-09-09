@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Animation, AnimationController, AlertController } from '@ionic/angular';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Animation, AnimationController, AlertController, NavController } from '@ionic/angular';
 
 
 @Component({
@@ -15,9 +16,16 @@ export class shopGetawaysPage implements OnInit {
   public hours: number;
   public days: number;
 
-  
+  trustedVideoUrl: SafeResourceUrl;
+  array_of_objects = [{
+    vid_link: "https://www.youtube.com/embed/c-EAcNXQ7N4" }]
+
+
+
+
   constructor(private animationCtrl: AnimationController,
-    public alertController: AlertController) {  }
+    public alertController: AlertController, public navCtrl: NavController,
+    private domSanitizer: DomSanitizer) {  }
 
   ngOnInit() {
 
@@ -33,20 +41,11 @@ export class shopGetawaysPage implements OnInit {
     this.minutes = minutes;
     this.hours = hours;
     this.days = days;
-    setTimeout(() => { this.showAlert(); }, 1000);
+    for (let i of this.array_of_objects) {
+      this.trustedVideoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(i.vid_link);
+    }
   }
-  async showAlert() {
-    const alert = await this.alertController.create({
-      header: 'Resort Page',
-      message: `<ul>
-      <li> This image is very blury at this resoloution</li>
-      <li>The count down will be built to actually count down from the back end. </li>
-      <li>Is there a page in between here and the next? in the documents given to IT it jumps from here to the confirmation page. (scroll for more)</li>
-      <li> are images / sections in the easy steps to take section supposed to lead to a corresponding action? </li>
-    </ul>`,
-      buttons: ['OK']
-    });
 
-    await alert.present();
-  }
+
 }
+

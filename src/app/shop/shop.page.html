@@ -1,41 +1,32 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Shop
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
+<nav></nav>
 <ion-content [fullscreen]="true">
-  <div id="welcome-header" >
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <h1 style="color:darkblue">Congratulations!</h1>
-          <h4>First Avenu VIP! Where do you want to get started?</h4>
-          <ion-card class="welcome-card" [routerLink]="['prequalify']">
-            <img src="../assets/Prequalify.png" />
-          </ion-card>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </div>
-  <div id="container" style="align-content:center">
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <h3 style="color:darkblue">Vacations</h3>
-          <img src="../assets/Vacation1.svg" />
-          <ion-button expand="block" routerLink="vacations">Over 3000 Destinations!</ion-button>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <h3 style="color:darkblue">Special Offers</h3>
-          <img style="padding-left: 2em" src="../assets/SpecialOffers.svg" />
-          <ion-button expand="block" routerLink="shop-special-offers-page">Special Offers Just For You!</ion-button>
-        </ion-col>
-      </ion-row>
+  <div id="welcome-header">
+    <ion-grid style="padding-top:.5em;">
+      <ion-col>
+        <ion-row>
+          <ion-col>
+            <h1 style="font-weight: 300; font-size: 44px !important;">Congratulations!</h1>
+            <h4>First Avenu VIP! Where do you want to get started?</h4>
+            <img style="width:100%;" src="../assets/Prequalify.svg" [routerLink]="['prequalify']" />
+            <img style="width:100%;" src="../assets/Pre-Qualify.svg" [routerLink]="['prequalify']" />
+            <img style="width:100%;" src="../assets/Purchase-Ready.svg" [routerLink]="['prequalify']" />
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <h2 style="font-weight: 300; font-size: 28px !important;">Vacations</h2>
+            <img class="vacation" src="../assets/Vacation1.svg" />
+            <ion-button class="vacation-button" color="light" expand="full" routerLink="vacations">Over 3000 Destinations!</ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <h2 style="font-weight: 300; font-size: 28px !important;">Special Offers</h2>
+            <img class="special-offers" src="../assets/SpecialOffers.svg" />
+            <ion-button class="special-offers-button" color="light" expand="full" routerLink="shop-special-offers-landing">Special Offers Just For You!</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
     </ion-grid>
   </div>
   <app-explore-container name="Shop page"></app-explore-container>

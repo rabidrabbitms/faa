@@ -8,6 +8,7 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 
 import { messagesPageRoutingModule } from './messages-routing.module';
 import { messagesLanding } from './messages.landing';
+import { NavPage } from '../shop/nav/nav';
 
 @NgModule({
   imports: [
@@ -17,6 +18,6 @@ import { messagesLanding } from './messages.landing';
     ExploreContainerComponentModule,
     messagesPageRoutingModule
   ],
-  declarations: [messagesPage, messagesLanding]
+  declarations: [messagesPage, messagesLanding, NavPage]
 })
 export class messagesPageModule {}

@@ -25,7 +25,6 @@ export class LoginRegister implements OnInit {
 
   ngOnInit() {
     this.createAnimation('.chat1', '', '0', '5', 950);
-    setTimeout(() => { this.showAlert(); }, 1000);
   }
   createAnimation(element: string, movementStyle: string, movementStart: string, movementEnd: string, duration: number) {
     if (movementStyle == 'vertical') {
@@ -57,15 +56,6 @@ export class LoginRegister implements OnInit {
       animation.play();
     }
 
-  }
-  async showAlert() {
-    const alert = await this.alertController.create({
-      header: 'registration',
-      message: 'all the fields have form validation and are required. They are optimized by for autofill on devices (not shown here because web demos are dumb). For this demo you can skip ahead and click the buttons or links to continue',
-      buttons: ['OK']
-    });
-
-    await alert.present();
   }
 
 }

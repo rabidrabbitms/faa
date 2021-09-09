@@ -1,0 +1,57 @@
+<nav></nav>
+<ion-content [fullscreen]="true">
+  <ion-row>
+    <ion-col>
+      <ion-text color="primary">
+        <h1>My Profile</h1>
+      </ion-text>
+    </ion-col>
+    <ion-col>
+      <ion-text style="padding-left:6em;"><a>Log Out</a></ion-text>
+    </ion-col>
+  </ion-row>
+  <ion-card>
+    <ion-row>
+      <ion-col>
+        <ion-row class="ion-justify-content-center">
+          <img src="../assets/user-circle.svg" />
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <h1 class="header1">[Full Name]</h1>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <ion-text class="body-header"><a>Edit Pic</a></ion-text>
+        </ion-row>
+        <ion-row style="margin-top:2em;">
+          <ion-col>
+            <ion-button expand="full" color="light" routerLink="../info">
+              <ion-text>My Info</ion-text>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button expand="full" color="light" routerLink="../payment">
+              <ion-text>Make A Payment</ion-text>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button expand="full" color="light" routerLink="../buying-power">
+              <ion-text>Buying Power</ion-text>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button expand="full" color="light" routerLink="../security">
+              <ion-text>Security Settings</ion-text>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+    <app-explore-container name="account page"></app-explore-container>
+</ion-content>

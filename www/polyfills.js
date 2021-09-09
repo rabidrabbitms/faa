@@ -4930,7 +4930,7 @@ module.exports = getBuiltIn('document', 'documentElement');
 
 /***/ }),
 
-/***/ 7091:
+/***/ 3232:
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/internals/ie8-dom-define.js ***!
   \**********************************************************/
@@ -5580,7 +5580,7 @@ module.exports = DESCRIPTORS ? Object.defineProperties : function defineProperti
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ 7012);
-var IE8_DOM_DEFINE = __webpack_require__(/*! ../internals/ie8-dom-define */ 7091);
+var IE8_DOM_DEFINE = __webpack_require__(/*! ../internals/ie8-dom-define */ 3232);
 var anObject = __webpack_require__(/*! ../internals/an-object */ 1099);
 var toPrimitive = __webpack_require__(/*! ../internals/to-primitive */ 8495);
 
@@ -5616,7 +5616,7 @@ var createPropertyDescriptor = __webpack_require__(/*! ../internals/create-prope
 var toIndexedObject = __webpack_require__(/*! ../internals/to-indexed-object */ 8643);
 var toPrimitive = __webpack_require__(/*! ../internals/to-primitive */ 8495);
 var has = __webpack_require__(/*! ../internals/has */ 7791);
-var IE8_DOM_DEFINE = __webpack_require__(/*! ../internals/ie8-dom-define */ 7091);
+var IE8_DOM_DEFINE = __webpack_require__(/*! ../internals/ie8-dom-define */ 3232);
 
 // eslint-disable-next-line es/no-object-getownpropertydescriptor -- safe
 var $getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;

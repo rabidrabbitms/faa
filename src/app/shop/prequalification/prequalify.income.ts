@@ -24,10 +24,9 @@ export class PrequalifyIncomePage implements OnInit {
 
   states: Array<any>
   infoShow: boolean = false;
-
+  employment;
   ngOnInit() {
     //this.createAnimation('.chat1', '', '0', '5', 950);
-    setTimeout(() => { this.showAlert(); }, 1000);
   }
 
   createAnimation(element: string, movementStyle: string, movementStart: string, movementEnd: string, duration: number) {
@@ -39,23 +38,6 @@ export class PrequalifyIncomePage implements OnInit {
           { offset: 1, transform: 'scale(1)', opacity: '1' }
         ]);
       animation.play();
-  }
-  async showAlert() {
-    const alert = await this.alertController.create({
-      header: 'Purchasing Power',
-      message: `
-                 <ul>
-                 <li>The pay cycle info, NMI info and help will be put in later</li>
-                 <li>There is no place to put a debit card in? the question is asked but nothing is done with that information?</li>
-                 <li>Why isn't this just one page combined with the previous?<li>
-                 </ul>`,
-      buttons: ['OK']
-    });
-
-    await alert.present();
-  }
-  back() {
-    this.location.back()
   }
 
 }

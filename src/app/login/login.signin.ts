@@ -25,7 +25,6 @@ export class LoginSignin implements OnInit {
 
   ngOnInit() {
     this.createAnimation('.chat1', '', '0', '5', 950)
-    setTimeout(() => { this.showAlert(); }, 1000);
 
   }
   createAnimation(element: string, movementStyle: string, movementStart: string, movementEnd: string, duration: number) {
@@ -58,15 +57,6 @@ export class LoginSignin implements OnInit {
       animation.play();
     }
 
-  }
-  async showAlert() {
-    const alert = await this.alertController.create({
-      header: 'Sign In',
-      message: 'One assumes there will be a forgot password page it was not included in the layout provided.The functionality for face and or biometric opening is still being worked on. For this demo you can enter any information and click log in to be taken to the main page.',
-      buttons: ['OK']
-    });
-
-    await alert.present();
   }
 
 }

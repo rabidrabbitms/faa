@@ -13,17 +13,18 @@ export class LoginPage implements OnInit {
   }
 
   ngOnInit() {
-    this.createAnimation('.cloud', 'horizontal', '0', '1000', 200000);
+    this.createAnimation('.cloud', 'horizontal', '0', '1000', 100000);
     this.createAnimation('.cloud2', 'horizontal', '0', '1000', 200000);
-    this.createAnimation('.cloud3', 'horizontal', '0', '1000', 200000);
-    this.createAnimation('.cloud4', 'horizontal', '0', '1000', 200000);
+    this.createAnimation('.cloud3', 'horizontal', '0', '1000', 300000);
+    this.createAnimation('.cloud4', 'horizontal', '0', '1000', 100000);
     this.createAnimation('.cloud5', 'horizontal', '0', '1000', 200000);
+    this.createAnimation('.cloud6', 'horizontal', '0', '-1000', 200000);
+    this.createAnimation('.cloud7', 'horizontal', '0', '1000', 200000);
+    this.createAnimation('.cloud8', 'horizontal', '0', '1000', 200000);
     this.createAnimation('.balloon', 'horizontal', '0', '1000',100000);
-    this.createAnimation('.airplane', 'horizontal', '0', '-1000',10000);
-    this.createAnimation('.sailboat', 'horizontal', '0', '-1000', 100000);
-    this.createAnimation('.boat', 'horizontal', '0', '10000', 100000);
-    this.createAnimation('.palms', 'vertical', '0', '10', 20000);
-    setTimeout(() => { this.showAlert(); }, 1000);
+    this.createAnimation('.airplane', 'horizontal', '0', '-1000',50000);
+    this.createAnimation('.sailboat', 'horizontal', '0', '-1000', 900000);
+    this.createAnimation('.boat', 'horizontal', '0', '10000', 800000);
   }
   createAnimation(element: string,movementStyle: string, movementStart: string, movementEnd: string,duration: number) {
     if (movementStyle == 'vertical') {
@@ -54,15 +55,6 @@ export class LoginPage implements OnInit {
     }
     
   }
-  async showAlert() {
-    const alert = await this.alertController.create({
-      header: 'Welcome!',
-      subHeader: 'This is the walk through of the brand new First-Avenu App',
-      message: 'Messages like this will appear from time to time with dev notes and important items such as... IT needs the full copy for the chat boxes here to finish animating this screen.',
-      buttons: ['OK']
-    });
 
-    await alert.present();
-  }
 
 }

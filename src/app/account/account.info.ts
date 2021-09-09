@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { Location } from '@angular/common';
 
-
 @Component({
   selector: 'app-account-info',
   templateUrl: 'account.info.html',
@@ -11,24 +10,46 @@ import { Location } from '@angular/common';
 })
 export class accountInfo implements OnInit {
   constructor(public alertController: AlertController, private location: Location) { }
-
-  ngOnInit(){
-    setTimeout(() => { this.showAlert(); }, 1000);
+  detail: boolean = true;
+  income: boolean = false;
+  bank: boolean = false;
+  debit: boolean =false;
+  ngOnInit() {
   }
-  async showAlert() {
-    const alert = await this.alertController.create({
-      header: 'Messages Landing',
-      message: `
-                 <ul>
-                 <li>There is no info page in the deck</li>
-                 <li>There is no bank and debit card info page in the deck</li>
-                 </ul>`,
-      buttons: ['OK']
-    });
-
-    await alert.present();
+  select(id) {
+    if (id === "income") {
+      this.detail = false;
+      this.bank = false;
+      this.debit = false;
+      this.income = true;
+    }
+    if (id === "bank") {
+      this.detail = false;
+      this.income = false;
+      this.debit = false;
+      this.bank = true;
+    }
+    if (id === "debit") {
+      this.detail = false;
+      this.bank = false;
+      this.income = false;
+      this.debit = true;
+    }
+    if (id === "detail") {
+      this.bank = false;
+      this.income = false;
+      this.debit = false;
+      this.detail = true;
+    }
+    console.log(id);
+    console.log(this.income);
   }
-  back() {
-    this.location.back()
+  loadImageFromDevice(event) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.readAsArrayBuffer(file);
+    reader.onload = () => {
+      let blob: Blob = new Blob([new Uint8Array((reader.result as ArrayBuffer))]);
+    };
   }
 }

@@ -19,20 +19,8 @@ export class PrequalifyFinalizePage implements OnInit {
   infoShow: boolean = false;
 
   ngOnInit() {
-    setTimeout(() => { this.showAlert(); }, 1000);
   }
-  async showAlert() {
-    const alert = await this.alertController.create({
-      header: 'Purchasing Power',
-      message: `
-                 <ul>
-                 <li>It's assumed that this would route back to the shop on button click</li>
-                 </ul>`,
-      buttons: ['OK']
-    });
 
-    await alert.present();
-  }
   routeHome() {
     console.log("fucking what")
     this.router.navigate(['tabs/tabs/shop'])

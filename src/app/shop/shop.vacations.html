@@ -1,19 +1,12 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button routerLink="../../shop"></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<nav></nav>
 
 <ion-content [fullscreen]="true">
-  <div id="vacation-welcome" >
+  <div id="vacation-welcome">
     <ion-grid>
       <ion-row>
         <ion-col>
-          <ion-card class="welcome-card" [routerLink]="['prequalify']">
-            <img src="../assets/Prequalify.png" />
-          </ion-card>
+          <h1 style="font-weight: 300; font-size: 44px !important;">Vacations</h1>
+          <img style="width:100%" src="../assets/Prequalify.svg" [routerLink]="['prequalify']" />
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -22,16 +15,16 @@
     <ion-grid>
       <ion-row>
         <ion-col>
-          <h3 style="color:darkblue">One Week Getaway</h3>
-          <img src="../assets/OneWeekGetaway.svg" />
-          <ion-button expand="block" routerLink="../getaways">Over 3000 Destinations!</ion-button>
+          <h2 style="font-weight: 300; font-size: 28px !important;">One Week Getaway</h2>
+          <img class="getaway" src="../assets/OneWeekGetaway.svg" />
+          <ion-button class="getaway-button" expand="full" color="light" routerLink="../getaways">Over 3000 Destinations!</ion-button>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <h3 style="color:darkblue">Ocean Adventure</h3>
-          <img style="padding-left: 2em" src="../assets/OceanAdventure.svg" />
-          <ion-button expand="block" routerLink="../cruises">Cruise The Seas!</ion-button>
+          <h2 style="font-weight: 300; font-size: 28px !important;">Ocean Adventure</h2>
+          <img class="cruise" src="../assets/OceanAdventure.svg" />
+          <ion-button class="cruise-button" expand="full" color="light" routerLink="../cruises">Cruse The Seas!</ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>

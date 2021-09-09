@@ -16,18 +16,9 @@ export class shopPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    setTimeout(() => { this.showAlert(); }, 1000);
 
   }
 
-  async showAlert() {
-    const alert = await this.alertController.create({
-      header: 'Shop Page',
-      message: 'This is the main landing page. The photo assets should be sized the same before being given to IT.',
-      buttons: ['OK']
-    });
 
-    await alert.present();
-  }
 
 }

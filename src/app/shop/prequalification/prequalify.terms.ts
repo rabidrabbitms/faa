@@ -14,7 +14,6 @@ export class PrequalifyTermsPage implements OnInit {
   
   ngOnInit() {
     this.createAnimation('.chat1', '', '0', '5', 950);
-    setTimeout(() => { this.showAlert(); }, 1000);
   }
 
   createAnimation(element: string, movementStyle: string, movementStart: string, movementEnd: string, duration: number) {
@@ -48,18 +47,6 @@ export class PrequalifyTermsPage implements OnInit {
     }
 
   }
-  async showAlert() {
-    const alert = await this.alertController.create({
-      header: 'Terms and Conditions',
-      message: `
-<ul>
-<li>Are These linked items supposed to be links to an external website? one inside the app? a download?</li>
-<li>One assumes that when I agree is clicked it routes to the second prequalification screen, is that true? what happens if they disagree?</li>
-</ul>`,
-      buttons: ['OK']
-    });
 
-    await alert.present();
-  }
 
 }

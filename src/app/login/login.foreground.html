@@ -1,13 +1,31 @@
-<ion-col>
-  <ion-row class="ion-justify-content-center">
-    <img class="chat1" src="../assets/LookyTalk1.svg" />
-  </ion-row>
-  <ion-row class="ion-justify-content-center">
-    <img src="../assets/Lookylooky.svg" />
-    <img src="../assets/FirstAvenulogin.svg" style="padding-top:1em" />
-  </ion-row>
-  <ion-row class="ion-justify-content-center"><ion-button color="tertiary" expand="block" style="padding-top:1em" routerLink="app-login-register">Get Started!</ion-button></ion-row>
-  <ion-row class="ion-justify-content-center" style="padding-top:1em">
-    <p>Already a member? <a href="signin">Login here</a>.</p>
-  </ion-row>
-</ion-col>
+<ion-row style="position: absolute; top:75px; left:0;">
+  <ion-col>
+    <ion-grid *ngFor="let chat of chats; let i=index" ng-style="chat.Hidden === true ? height: '0px' : ''" [ngClass]="chat.Hidden === true ? 'ion-hide' : ''" style="z-index:99;" (click)="selectChat(chat)" id="chat{{i}}">
+      <ion-row [ngClass]="chat.Selected ? 'no-padding bubble' : 'no-padding bubble transparent'">
+        <ion-col class="no-padding">
+          <ion-text *ngIf="!chat.Selected" [hidden]="chat.Hidden" ng-style="chat.Hidden === true ? height: '0px' : ''">{{chat.ShortText}}</ion-text>
+          <ion-text *ngIf="chat.Selected" [hidden]="chat.Hidden" ng-style="chat.Hidden === true ? height: '0px' : ''">{{chat.LongText}}</ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="chat.Selected" class="no-padding" style="margin-top: -2px;">
+        <ion-col class="no-padding" style="z-index: 9999;">
+          <img src="../assets/Taylors_Dip.svg" class="tail" />
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-col>
+</ion-row>
+<ion-row style="padding-top:22em;">
+  <ion-col>
+    <ion-row class="ion-justify-content-center">
+      <img src="../assets/Lookylooky.svg" />
+      <img src="../assets/FirstAvenulogin.svg" style="padding-top:1em" />
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-button color="tertiary" expand="block" style="padding-top:1em" routerLink="../app-login-register">Get Started!</ion-button>
+    </ion-row>
+    <ion-row class="ion-justify-content-center" style="padding-top:1em">
+      <p>Already a member? <a href="signin">Login here</a>.</p>
+    </ion-row>
+  </ion-col>
+</ion-row>

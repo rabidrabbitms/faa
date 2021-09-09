@@ -1,0 +1,32 @@
+<nav></nav>
+<ion-content [fullscreen]="true">
+  <div id="vacation-welcome" >
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h1 style="font-weight: 300; font-size: 44px !important;">Special Offers</h1>
+          <img style="width:100%" src="../assets/Prequalify.svg" [routerLink]="['prequalify']" />
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div id="container" style="align-content:center">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h2 style="font-weight: 300; font-size: 28px !important;">Product 1</h2>
+            <img class="getaway" src="../assets/SpecialOffers2.svg" />
+            <ion-button class="button" expand="full" color="light" routerLink="../shop-special-offers-page">Product Tagline</ion-button>
+         </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <h2 style="font-weight: 300; font-size: 28px !important;">Product 2</h2>
+            <img class="cruise" src="../assets/SpecialOffers3.svg" />
+            <ion-button class="button" expand="full" color="light" routerLink="../shop-special-offers-page">Product Tagline</ion-button>
+</ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <app-explore-container name="Vacations Page"></app-explore-container>
+</ion-content>

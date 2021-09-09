@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { AlertController, AnimationController, NavController } from '@ionic/angular';
 
 
 @Component({
@@ -14,20 +16,22 @@ export class shopCruisesPage implements OnInit {
   public hours: number;
   public days: number;
 
-  private accordion_expanded = false;
-  private items = [
-    { 'name': 'item 1' },
-    { 'name': 'item 2' },
-    { 'name': 'item 3' },
-    { 'name': 'item 4' },
-    { 'name': 'item 5' },
-    { 'name': 'item 6' },
-    { 'name': 'item 7' },
-    { 'name': 'item 8' }
-  ]
-  constructor() {  }
+
+  constructor(private animationCtrl: AnimationController,
+    public alertController: AlertController, public navCtrl: NavController,
+    private domSanitizer: DomSanitizer) { }
+
+  trustedVideoUrl: SafeResourceUrl;
+  array_of_objects = [{
+    vid_link: "https://www.youtube.com/embed/eIn5wvn6XZ4"
+  }]
+
+
 
   ngOnInit() {
+    for (let i of this.array_of_objects) {
+      this.trustedVideoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(i.vid_link);
+    }
 
     const deadline = Date.parse('September 1 2021 23:59:59 GMT+0200');
     const date = new Date();
@@ -42,7 +46,5 @@ export class shopCruisesPage implements OnInit {
     this.hours = hours;
     this.days = days;
   }
-  private toggle_accordion() {
-    this.accordion_expanded = this.accordion_expanded === false;
-  }
+  
 }

@@ -32,23 +32,8 @@ export class SpecialOffersPage implements OnInit {
     this.minutes = minutes;
     this.hours = hours;
     this.days = days;
-    setTimeout(() => { this.showAlert(); }, 1000);
   }
-  async showAlert() {
-    const alert = await this.alertController.create({
-      header: 'Special Offers Page',
-      message: `<ul>
-      <li>Is the image area supposed to alternate between products or be images of the same product from differing views.</li>
-      <li>If it's supposed to be differing views IT needs the full photo deck.</li>
-      <li>If it's supposed to be alternating between products that doesn't make sense and like the vacations page there should be a page between here and the shop landing that shows the products.</li>
-      <li>The only difference between this and the next screen in the deck is the button now says order now instead of apply. One assumes that if the user has purchasing power equal or greater than the cost of the
-          item then it would just say order, is there no increase button? like if the user has applied but their PP is too small there would be a button to request an increase.</li>
-    </ul>`,
-      buttons: ['OK']
-    });
-
-    await alert.present();
-  }
+  
   async showAlert2() {
       const alert = await this.alertController.create({
         header: 'Congratulations!',

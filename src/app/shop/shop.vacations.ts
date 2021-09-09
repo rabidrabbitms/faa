@@ -16,19 +16,9 @@ export class shopVacationsPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    setTimeout(() => { this.showAlert(); }, 1000);
 
   }
 
-  async showAlert() {
-    const alert = await this.alertController.create({
-      header: 'Vacations Page',
-      message: 'The photo assets should be sized the same before being imported. The Pre-qualify me button will go away once there is logic and a back end to globally see if a user is prequalified',
-      buttons: ['OK']
-    });
-
-    await alert.present();
-  }
 
 }
 

@@ -1,55 +1,81 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="tabs/shop/vacations"></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<nav></nav>
 
 <ion-content [fullscreen]="true">
   <div id="container" style="align-content:center">
     <ion-grid>
       <ion-row>
         <ion-col>
-          <h2 style="color:darkblue">Ocean Adventure</h2>
+          <h1 class="header">Ocean Adventure</h1>
           <hr />
-          <h3 style="color:darkblue"><strong>Relaxing Cruises</strong></h3>
-          <img src="../assets/cruise.png" />
+          <h2 class="header2"><strong>Relaxing Cruises</strong></h2>
+          <ion-slides pager="true" [options]="slideOpts">
+            <ion-slide>
+              <iframe [src]="trustedVideoUrl" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </ion-slide>
+            <ion-slide>
+              <img src="../assets/cruise.png" />
+            </ion-slide>
+            <ion-slide>
+              <img src="../assets/cruise.png" />
+            </ion-slide>
+          </ion-slides>
         </ion-col>
       </ion-row>
-      <ion-row style="background:#333184">
+      <ion-grid class="ion-no-padding" style="background:#333184; padding-top: 10px; padding-bottom: 0px;">
+        <ion-row class="ion-no-padding" style="height: 20px; font-size: 30px; color: #fff; font-family:'text';">
+          <ion-col size="2" class="ion-no-padding" style="text-align: center;">
+            <ion-text>05</ion-text>
+          </ion-col>
+          <ion-col size="2" class="ion-no-padding" style="text-align: center;">
+            <ion-text>21</ion-text>
+          </ion-col>
+          <ion-col size="2" class="ion-no-padding" style="text-align: center;">
+            <ion-text>09</ion-text>
+          </ion-col>
+          <ion-col size="2" class="ion-no-padding" style="text-align: center;">
+            <ion-text>38</ion-text>
+          </ion-col>
+          <ion-col size="4" class="ion-no-padding" style="text-align: center;">
+            <h2 style="font-size:11px; color:#ffffff !important; font-family:'text' !important; margin: 0; padding: 0;">Limited Availability</h2>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-no-padding">
+          <ion-col size="2" class="ion-no-padding" style="text-align: center;">
+            <ion-text style="font-size:8px; color:#ffffff !important; font-family:'text' !important;">Days</ion-text>
+          </ion-col>
+          <ion-col size="2" class="ion-no-padding" style="text-align: center;">
+            <ion-text style="font-size:8px; color:#ffffff !important; font-family:'text' !important;">Hrs</ion-text>
+          </ion-col>
+          <ion-col size="2" class="ion-no-padding" style="text-align: center;">
+            <ion-text style="font-size:8px; color:#ffffff !important; font-family:'text' !important;">Mins</ion-text>
+          </ion-col>
+          <ion-col size="2" class="ion-no-padding" style="text-align: center;">
+            <ion-text style="font-size:8px; color:#ffffff !important; font-family:'text' !important;">Secs</ion-text>
+          </ion-col>
+          <ion-col size="4" class="ion-no-padding"></ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-row>
         <ion-col>
-          <ion-col>
-            <img src="../assets/VectorTimer.png" />
-          </ion-col>
-          <ion-col>
-            <span style="color:white"><strong>{{hours}}</strong></span>
-            <span style="color:white"><strong>:{{minutes}}</strong></span>
-            <span style="color:white"><strong>:{{seconds}}</strong></span>
-          </ion-col>
-          <ion-col>
-            <strong style="color:white; font:xx-small"> Limited Availability</strong>
-          </ion-col>
+          <ion-row style="margin-bottom:1em;">
+            <h4 class="header1">Great Vacations with Easy Payments</h4>
+          </ion-row>
+          <ion-row style="margin-bottom:1em;">
+            <ion-text class="body-header">5-Day/4-Night Cruise for 2 Adults</ion-text>
+            <ion-text class="body-body">Departs from any major international airport in the continental United States.</ion-text>
+          </ion-row>
+          <ion-row>
+            <ion-text class="body-header">Ports Including: Port Canaveral, Florida; Miami, Florida or Long Beach, California</ion-text>
+            <ion-text class="body-body">Optional upgrades available through our in-house full-service travel agency.</ion-text>
+          </ion-row>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-row>
-            <h4 style="color:darkblue">Great Vacations with Easy Payments</h4>
-          </ion-row>
-          <ion-row>
-            <h5 style="color:darkblue"><strong>5-Day/4-Night Cruise for 2 Adults</strong></h5>
-            <p>Departs from any major international airport in the continental United States.</p>
-          </ion-row>
-          <ion-row>
-            <h5 style="color:darkblue"><strong>Ports Including: Port Canaveral, Florida; Miami, Florida or Long Beach, California</strong></h5>
-            <p>Optional upgrades available through our in-house full-service travel agency.</p>
-          </ion-row>
+          <ion-button color="tertiary" expand="full" routerLink="../payment-agreement">Buy Now</ion-button>
         </ion-col>
-      </ion-row>
-      <ion-row>
         <ion-col>
-          <ion-button color="tertiary" expand="block" routerLink="../registration-landing">Check'em Out!</ion-button>
+          <ion-button color="tertiary" expand="full" routerLink="../payment-agreement">Add to Cart</ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -62,7 +88,6 @@
                 How Does It Work?
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <ion-item-divider></ion-item-divider>
             <shophow></shophow>
           </mat-expansion-panel>
         </mat-accordion>
@@ -75,7 +100,6 @@
                 Easy Steps To Take
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <ion-item-divider></ion-item-divider>
             <shopsteps></shopsteps>
           </mat-expansion-panel>
         </mat-accordion>

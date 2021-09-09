@@ -10,6 +10,14 @@ import { PrequalifyLandingPage } from './prequalification/prequalify.landing';
 import { PrequalifyTermsPage } from './prequalification/prequalify.terms';
 import { PrequalifyIncomePage } from './prequalification/prequalify.income';
 import { PrequalifyFinalizePage } from './prequalification/prequalify.finalize';
+import { shopPaymentAgreementPage } from './shared-components/shop.payment-agreement';
+import { shopSpecialOffersLandingPage } from './shop.special-offers-landing';
+import { CartPage } from './cart/cart.page';
+import { AgreementLandingPage } from './agreement/agreement.landing';
+import { AgreementFinancingPage } from './agreement/agreement.financing';
+import { AgreementSignaturePage } from './agreement/agreement.signature';
+import { AgreementReviewPage } from './agreement/agreement.review';
+import { AgreementFinalizingPage } from './agreement/agreement.finalizing';
 
 const routes: Routes = [
   {
@@ -19,6 +27,10 @@ const routes: Routes = [
   {
     path: 'vacations',
     component: shopVacationsPage
+  },
+  {
+    path: 'shop-special-offers-landing',
+    component: shopSpecialOffersLandingPage
   },
   {
     path: 'getaways',
@@ -51,6 +63,34 @@ const routes: Routes = [
   {
     path: 'prequalify-finalize',
     component: PrequalifyFinalizePage
+  },
+  {
+    path: 'agreement',
+    component: AgreementLandingPage
+  },
+  {
+    path: 'agreement-financing',
+    component: AgreementFinancingPage
+  },
+  {
+    path: 'agreement-signature',
+    component: AgreementSignaturePage
+  },
+  {
+    path: 'agreement-review',
+    component: AgreementReviewPage
+  },
+  {
+    path: 'agreement-finalize',
+    component: AgreementFinalizingPage
+  },
+  {
+    path: 'payment-agreement',
+    component: shopPaymentAgreementPage
+  },
+  {
+    path: 'cart',
+    component: CartPage
   }
 ];
 

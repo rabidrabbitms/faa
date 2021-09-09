@@ -1,10 +1,4 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button routerLink="../../shop"></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<nav></nav>
 
 
 
@@ -13,39 +7,68 @@
     <ion-grid>
       <ion-row>
         <ion-col>
-          <h1 style="color:darkblue">Special Offers</h1>
-          <h4>Apple iPad 32GB - Silver</h4>
-          <img src="../assets/Apple-iPad.png" />
+          <h1 class="header">Special Offers</h1>
+          <h2 class="header2">Apple iPad 32GB - Silver</h2>
+          <ion-slides pager="true" [options]="slideOpts">
+            <ion-slide>
+              <img src="../assets/Apple-iPad.png" />
+            </ion-slide>
+            <ion-slide>
+              <img src="../assets/Apple-iPad.png" />
+            </ion-slide>
+            <ion-slide>
+              <img src="../assets/Apple-iPad.png" />
+            </ion-slide>
+          </ion-slides>
         </ion-col>
       </ion-row>
     </ion-grid>
   </div>
   <div id="container" style="align-content:center">
-    <ion-grid>
-      <ion-row style="background:#333184">
-        <ion-col>
-          <ion-col>
-            <img src="../assets/VectorTimer.png" />
-          </ion-col>
-          <ion-col>
-            <span style="color:white"><strong>{{hours}}</strong></span>
-            <span style="color:white"><strong>:{{minutes}}</strong></span>
-            <span style="color:white"><strong>:{{seconds}}</strong></span>
-          </ion-col>
-          <ion-col>
-            <strong style="color:white; font:xx-small;margin-left:75px"> Only 3 left!</strong>
-          </ion-col>
+    <ion-grid class="ion-no-padding" style="background:#333184; padding-top: 10px; padding-bottom: 0px;">
+      <ion-row class="ion-no-padding" style="height: 20px; font-size: 30px; color: #fff; font-family:'text';">
+        <ion-col size="2" class="ion-no-padding" style="text-align: center;">
+          <ion-text>05</ion-text>
+        </ion-col>
+        <ion-col size="2" class="ion-no-padding" style="text-align: center;">
+          <ion-text>21</ion-text>
+        </ion-col>
+        <ion-col size="2" class="ion-no-padding" style="text-align: center;">
+          <ion-text>09</ion-text>
+        </ion-col>
+        <ion-col size="2" class="ion-no-padding" style="text-align: center;">
+          <ion-text>38</ion-text>
+        </ion-col>
+        <ion-col size="4" class="ion-no-padding" style="text-align: center;">
+          <h2 style="font-size:11px; color:#ffffff !important; font-family:'text' !important; margin: 0; padding: 0;">Limited Availability</h2>
         </ion-col>
       </ion-row>
+      <ion-row class="ion-no-padding">
+        <ion-col size="2" class="ion-no-padding" style="text-align: center;">
+          <ion-text style="font-size:8px; color:#ffffff !important; font-family:'text' !important;">Days</ion-text>
+        </ion-col>
+        <ion-col size="2" class="ion-no-padding" style="text-align: center;">
+          <ion-text style="font-size:8px; color:#ffffff !important; font-family:'text' !important;">Hrs</ion-text>
+        </ion-col>
+        <ion-col size="2" class="ion-no-padding" style="text-align: center;">
+          <ion-text style="font-size:8px; color:#ffffff !important; font-family:'text' !important;">Mins</ion-text>
+        </ion-col>
+        <ion-col size="2" class="ion-no-padding" style="text-align: center;">
+          <ion-text style="font-size:8px; color:#ffffff !important; font-family:'text' !important;">Secs</ion-text>
+        </ion-col>
+        <ion-col size="4" class="ion-no-padding"></ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
       <ion-row>
-        <p style="display:inline;">
-          <span style="color:darkblue; font-weight:bold">Monthly Payment: $XX.XX</span>
-          <span style="margin-left:75px;">Retail Value $XXX.XX</span>
-        </p>
+        <ion-text class="body-body">[Paycycle] Payment: $XX.XX</ion-text>
       </ion-row>
       <ion-row>
-        <ion-col class="ion-text-center">
-          <ion-button (click)="showAlert2()">Apply Now/Order Now</ion-button>
+        <ion-col>
+          <ion-button color="tertiary" expand="full" routerLink="../payment-agreement">Buy Now</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="tertiary" expand="full" routerLink="../payment-agreement">Add to Cart</ion-button>
         </ion-col>
       </ion-row>
       <ion-row>
@@ -56,9 +79,11 @@
                 Description
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <p>This Silver, latest model, 32GB Wi-Fi enabled, Apple iPad features: 10.2-inch Retina display,
-            Touch ID fingerprint sensor, 8MP back camera, 1.2MP FaceTime HD front camera, Up to 10 hours of battery life,
-            Lightning connector for charging and accessories. Support for Smart Keyboard and Apple Pencil.</p>
+            <ion-text class="body-body">
+              This Silver, latest model, 32GB Wi-Fi enabled, Apple iPad features: 10.2-inch Retina display,
+              Touch ID fingerprint sensor, 8MP back camera, 1.2MP FaceTime HD front camera, Up to 10 hours of battery life,
+              Lightning connector for charging and accessories. Support for Smart Keyboard and Apple Pencil.
+            </ion-text>
           </mat-expansion-panel>
         </mat-accordion>
       </ion-row>

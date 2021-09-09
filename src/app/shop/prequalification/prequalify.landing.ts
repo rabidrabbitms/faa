@@ -26,7 +26,6 @@ export class PrequalifyLandingPage implements OnInit {
 
   ngOnInit() {
     this.createAnimation('.chat1', '', '0', '5', 950);
-    setTimeout(() => { this.showAlert(); }, 1000);
     this.states = ['VA','DE','MS','NV','UT' ]
   }
 
@@ -61,16 +60,5 @@ export class PrequalifyLandingPage implements OnInit {
     }
 
   }
-  async showAlert() {
-    const alert = await this.alertController.create({
-      header: 'Purchasing Power',
-      message: 'There is some confusion here with the link on the bottom, there is a registration page that does not carry the address, Phone, Social or Birthdate at the begining of the process. If we are not pushing them through the whole process on registration then link at the bottom does not make sense since they are already "registered" but not "prequalified" if the processes are seperate (initial registration and then prequalification) then the only things that need to be on this page are the things not picked up on initial registration. The info button on SSN will show the reason in subsequent versions.',
-      buttons: ['OK']
-    });
 
-    await alert.present();
-  }
-  back() {
-    this.location.back()
-  }
 }

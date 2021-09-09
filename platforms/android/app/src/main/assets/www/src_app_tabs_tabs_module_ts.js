@@ -29,6 +29,10 @@ const routes = [
                 loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_shop_shop_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ../shop/shop.module */ 7838)).then(m => m.shopPageModule)
             },
             {
+                path: 'shop/vacations',
+                loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_shop_shop_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ../shop/shop.module */ 7838)).then(m => m.shopPageModule)
+            },
+            {
                 path: 'messages',
                 loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_messages_messages_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ../messages/messages.module */ 4812)).then(m => m.messagesPageModule)
             },
@@ -45,7 +49,7 @@ const routes = [
     },
     {
         path: '',
-        redirectTo: '/tabs/shop',
+        redirectTo: './login/login.module',
         pathMatch: 'full'
     }
 ];
@@ -165,7 +169,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-tabs>\n\n  <ion-tab-bar slot=\"bottom\">\n    <ion-tab-button tab=\"shop\">\n      <img src=\"./assets/logoguy.png\">\n      <ion-label>Shop</ion-label>\n    </ion-tab-button>\n\n    <ion-tab-button tab=\"messages\">\n      <ion-icon name=\"chatbox-ellipses-outline\"></ion-icon>\n      <ion-label>Messages</ion-label>\n    </ion-tab-button>\n\n    <ion-tab-button tab=\"account\">\n      <ion-icon name=\"menu-outline\"></ion-icon>\n      <ion-label>Account</ion-label>\n    </ion-tab-button>\n  </ion-tab-bar>\n\n</ion-tabs>\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-tabs>\r\n  <ion-tab-bar slot=\"bottom\">\r\n    <ion-tab-button tab=\"shop\">\r\n      <ion-icon src=\"./assets/icon/LookyIcon.svg\"></ion-icon>\r\n      <ion-label>Shop</ion-label>\r\n    </ion-tab-button>\r\n\r\n    <ion-tab-button tab=\"messages\">\r\n      <ion-icon src=\"./assets/icon/Message.svg\"></ion-icon>\r\n      <ion-label>Messages</ion-label>\r\n    </ion-tab-button>\r\n\r\n    <ion-tab-button tab=\"account\">\r\n      <ion-icon src=\"./assets/icon/Account.svg\"></ion-icon>\r\n      <ion-label>Account</ion-label>\r\n    </ion-tab-button>\r\n  </ion-tab-bar>\r\n\r\n</ion-tabs>\r\n");
 
 /***/ })
 

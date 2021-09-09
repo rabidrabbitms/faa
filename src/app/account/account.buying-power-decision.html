@@ -1,0 +1,50 @@
+<nav></nav>
+
+<ion-content [fullscreen]="true">
+  <ion-text color="primary">
+    <h1 class="header">Buying Power</h1>
+  </ion-text>
+  <ion-row class="ion-justify-content-center">
+    <img src="../assets/Train.svg" />
+  </ion-row>
+  <div *ngIf="approved == 'true'">
+    <ion-row class="ion-justify-content-center">
+      <h1 class="header1">Congratulations!</h1>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <h1 class="header1">Your Buying Power is now:</h1>
+    </ion-row>
+    <ion-row style="margin-top:1em;" class="ion-justify-content-center">
+      <h1 class="header">[$ Amount]</h1>
+    </ion-row>
+    <ion-row style="margin-top:1em;" class="ion-justify-content-center">
+      <ion-text class="body-body">Your current Buying Power is directly affected by your outstanding First Avenu purchases. </ion-text>
+    </ion-row>
+    <ion-row style="margin-top:1em;" class="ion-justify-content-center">
+      <ion-button color="tertiary" routerLink="../../shop">Let's Shop</ion-button>
+    </ion-row>
+  </div>
+  <div *ngIf="approved == 'false'">
+    <ion-row class="ion-justify-content-center">
+      <h1 class="header1">We're sorry...</h1>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <h1 class="header1">We connot update your buying power at this time.</h1>
+    </ion-row>
+    <ion-row style="margin-top:1em;" class="ion-justify-content-center">
+      <ion-button color="tertiary" routerLink="../../shop">Back to Shop</ion-button>
+    </ion-row>
+  </div>
+  <div *ngIf="approved == 'manual'">
+    <ion-row class="ion-justify-content-center">
+      <h1 class="header1">We're Working on it!</h1>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <h1 class="header1">You will be notified by email after our team has completed the review of your account!</h1>
+    </ion-row>
+    <ion-row style="margin-top:1em;" class="ion-justify-content-center">
+      <ion-button color="tertiary" routerLink="../../shop">Back to Shop</ion-button>
+    </ion-row>
+  </div>
+  <app-explore-container name="account page"></app-explore-container>
+</ion-content>
