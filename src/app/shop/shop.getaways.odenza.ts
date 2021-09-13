@@ -18,7 +18,7 @@ export class shopGetawaysOdenzaPage implements OnInit {
 
   trustedVideoUrl: SafeResourceUrl;
   array_of_objects = [{
-    link: "https://oneweekgetaway.com/" }]
+    link: "https://www.mywebrez.com/odenzares2" }]
 
 
 
