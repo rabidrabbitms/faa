@@ -2,8 +2,8 @@
   <ion-grid style="position: absolute; top: 0; left: 0; min-width:100%; min-height:800px;">
     <app-login-background class="background"></app-login-background>
   </ion-grid>
-  <ion-grid style="position: absolute; top: 0; left: 0; min-width:100%; min-height:800px;">
-    <ion-row  style="margin-top:12em;">
+  <ion-grid style="position: absolute; top: 0; left: 0; min-width: 100%; min-height: 800px; z-index: 999">
+    <ion-row style="margin-top: 12em; z-index: 999">
       <ion-col>
         <ion-row class="ion-justify-content-center" style="padding-top:.5em">
           <img class="chat1" style="z-index:999" src="../assets/EmailSent.svg" *ngIf="!show" />
@@ -16,15 +16,15 @@
           <ion-col style="padding:0em">
             <ion-card>
               <ion-row class="ion-justify-content-center" style="margin-top:4em;">
-                <ion-text class="header1"style="z-index:999" *ngIf="!show">Please verify your email</ion-text>
-                <ion-text class="header1"style="z-index:999" *ngIf="show">Thanks [First Name]</ion-text>
+                <ion-text class="header1" style="z-index:999" *ngIf="!show">Please verify your email</ion-text>
+                <ion-text class="header1" style="z-index:999" *ngIf="show">Thanks [First Name]</ion-text>
               </ion-row>
               <ion-row class="ion-justify-content-center" style="margin-top:1em;">
-                <ion-text class="body-body"style="z-index:999" *ngIf="!show">Looky sent a verification email to:</ion-text>
-                <ion-text class="body-body" *ngIf="show">Email Confirmed</ion-text>
+                <ion-text class="body-body" style="z-index:999" *ngIf="!show">Looky sent a verification email to:</ion-text>
+                <ion-text class="body-body" style="z-index:999" *ngIf="show">Email Confirmed</ion-text>
               </ion-row>
               <ion-row class="ion-justify-content-center">
-                <ion-text class="body-body"style="z-index:999" *ngIf="!show">[user’s email address]</ion-text>
+                <ion-text class="body-body" style="z-index:999" *ngIf="!show">[user’s email address]</ion-text>
               </ion-row>
               <ion-row class="ion-justify-content-center" style="margin-top:2em;">
                 <ion-button color="tertiary" style="z-index:999" expand="full" (click)="show1()" *ngIf="!show">Resend Email</ion-button>
