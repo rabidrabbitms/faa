@@ -1,59 +1,36 @@
-<ion-content class="body">
-  <div class="outer">
-    <div class="inner">
-      <img class="airplane" src="../assets/Airplane1.svg" />
-    </div>
-    <div class="inner2">
-      <img class="balloon" src="../assets/HotAirBalloon.svg" />
-    </div>
-    <div class="inner3">
-      <img class="sailboat" src="../assets/Sailboat1.svg" style="padding-right:3em" />
-    </div>
-    <div class="inner4">
-      <img class="boat" src="../assets/Boat.svg" />
-    </div>
-    <div class="inner5">
-      <img class="palms" src="../assets/PalmTrees.svg" />
-    </div>
-    <div class="inner6">
-      <img class="cloud6" src="../assets/Cloud2.svg" />
-    </div>
-    <ion-grid style="height:600px">
-      <ion-row>
-        <ion-col size="3">
-          <ion-row class="ion-justify-content-left">
-            <ion-col size="3">
-              <img class="cloud" src="../assets/Cloud.svg" style="padding-left:3em" />
-            </ion-col>
-          </ion-row>
-          <ion-row class="ion-justify-content-left" style="padding-top:2em">
-            <ion-col>
-            </ion-col>
-            <ion-col class="ion-justify-content-top">
-              <img class="cloud2" src="../assets/Cloud2.svg" style="padding-top:2em" />
-            </ion-col>
-            <ion-col>
-              <ion-row class="ion-justify-content-center">
-                <img class="cloud3" src="../assets/Cloud3.svg" style="padding-right:3em" />
-              </ion-row>
-            </ion-col>
-            <ion-row>
-              <ion-col>
-                <img class="cloud4" src="../assets/Cloud.svg" style="padding-left:3em" />
-              </ion-col>
-              <ion-col>
-                <img class="cloud5" src="../assets/Cloud2.svg" style="padding-top:3em" />
-              </ion-col>
-            </ion-row>
-          </ion-row>
-        </ion-col>
+<ion-grid style="position: absolute; top: 0; left: 0; min-width:100%; min-height:800px;">
+  <app-login-background class="background"></app-login-background>
+</ion-grid>
+<ion-grid style="position: absolute; top: 0; left: 0;">
+  <ion-row style="position: absolute; top:75px; left:0;">
+    <ion-col>
+      <ion-grid *ngFor="let chat of chats; let i=index" ng-style="chat.Hidden === true ? height: '0px' : ''" [ngClass]="chat.Hidden === true ? 'ion-hide' : ''" style="z-index:99;" (click)="selectChat(chat)" id="chat{{i}}">
+        <ion-row [ngClass]="chat.Selected ? 'no-padding bubble' : 'no-padding bubble transparent'">
+          <ion-col class="no-padding">
+            <ion-text *ngIf="!chat.Selected" [hidden]="chat.Hidden" ng-style="chat.Hidden === true ? height: '0px' : ''">{{chat.ShortText}}</ion-text>
+            <ion-text *ngIf="chat.Selected" [hidden]="chat.Hidden" ng-style="chat.Hidden === true ? height: '0px' : ''">{{chat.LongText}}</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row *ngIf="chat.Selected" class="no-padding" style="margin-top: -2px;">
+          <ion-col class="no-padding" style="z-index: 9999;">
+            <img src="../assets/Taylors_Dip.svg" class="tail" />
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-row class="ion-justify-content-center" style="z-index:999; margin-top:22em;">
+        <img src="../assets/Lookylooky.svg"  style="z-index:999"/>
+        <img src="../assets/FirstAvenulogin.svg" style="padding-top: 1em; z-index: 999"/>
       </ion-row>
-    </ion-grid>
-
-  </div>
-
-  <ion-grid style="position: absolute; top: 0; left: 0;">
-    <app-login-foreground class="foreground"></app-login-foreground>
-  </ion-grid>
-
-</ion-content>
+      <ion-row class="ion-justify-content-center">
+        <ion-button color="tertiary" expand="block" style="padding-top: 1em; z-index: 999" routerLink="../app-login-register">Get Started!</ion-button>
+      </ion-row>
+      <ion-row class="ion-justify-content-center" style="padding-top: 1em; z-index: 999">
+        <ion-text style="z-index:999;"> Already a member? <a href="signin">Login here</a>.</ion-text>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</ion-grid>

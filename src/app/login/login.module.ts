@@ -4,11 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { LoginPageRoutingModule } from './login-routing.module';
 import { LoginPage } from './login.page';
-import { LoginForeground } from './login.foreground'
 import { LoginRegister } from './login.register';
 import { LoginSignin } from './login.signin';
 import { LoginLoading } from './login.loading';
 import { LoginVerify } from './login.verify';
+import { LoginBackground } from './login.background';
 
 @NgModule({
   imports: [
@@ -17,6 +17,6 @@ import { LoginVerify } from './login.verify';
     IonicModule,
     LoginPageRoutingModule
   ],
-  declarations: [LoginPage, LoginForeground, LoginRegister, LoginSignin, LoginLoading, LoginVerify]
+  declarations: [LoginBackground, LoginPage, LoginRegister, LoginSignin, LoginLoading, LoginVerify]
 })
 export class LoginPageModule {}

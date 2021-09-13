@@ -1,14 +1,15 @@
 <nav></nav>
-
-<ion-row>
-  <h1 class="header">
-    Your Agreeement
-  </h1>
-</ion-row>
-<ion-row>
-  <ion-card style="width: 100%">
-    <ion-grid>
-      <div *ngIf="!approved">
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <h1 class="header">
+        Your Agreement
+      </h1>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-card style="width: 100%">
+      <ion-grid>
         <ion-row>
           <ion-col>
             <ion-row>
@@ -25,23 +26,7 @@
         <ion-row class="ion-justify-content-center">
           <img src="../assets/Drink-600.gif" />
         </ion-row>
-      </div>
-      <div *ngIf="approved">
-        <ion-row>
-          <ion-col>
-            <ion-row>
-              <h2 class="header2">Congratulations!</h2>
-            </ion-row>
-            <ion-row>
-              <h2 class="header2">Your agreement is signed and your purchasing power will be available shortly.</h2>
-            </ion-row>
-            <ion-row class="ion-justify-content-center">
-              <ion-button color="tertiary" expand="full" routerLink="../">Let's Shop!</ion-button>
-            </ion-row>
-          </ion-col>
-        </ion-row>
-      </div>
-    </ion-grid>
-  </ion-card>
-</ion-row>
-
+      </ion-grid>
+    </ion-card>
+  </ion-row>
+</ion-grid>

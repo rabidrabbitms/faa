@@ -1,8 +1,8 @@
 <nav></nav>
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="false">
   <ion-row>
     <ion-col>
-      <ion-slides pager="true" [options]="slideOpts">
+      <ion-slides [options]="{ slidesPerView:1, autoplay: {delay: 10000} }" pager="true">
         <ion-slide>
           <img src="../assets/message1.png" />
         </ion-slide>
@@ -24,13 +24,6 @@
   </ion-row>
   <ion-row class="ion-justify-content-center">
     <ion-button color="tertiary" routerLink="../messages">Let's Go</ion-button>
-  </ion-row>
-  <ion-row class="ion-justify-content-center">
-    <ion-col>
-      <ion-row class="ion-justify-content-center">
-        <a>Information About Messaging</a>
-      </ion-row>
-    </ion-col>
   </ion-row>
 </ion-content>
 <ion-footer>

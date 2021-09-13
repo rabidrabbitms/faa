@@ -16,7 +16,7 @@ export class AgreementFinalizingPage implements OnInit {
 
   async ngOnInit() {
     await this.delay(10000);
-    this.approved = true;
+    this.route.navigate(['tabs/tabs/shop']);
   }
   delay(ms: number) {
     return new Promise(resolve => setTimeout(resolve, ms));

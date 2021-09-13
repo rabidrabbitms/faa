@@ -21,6 +21,10 @@ import { accountBuyingPower } from './account.buying-power';
 import { accountBuyingPowerForm } from './account.buying-power-form';
 import { accountBuyingPowerDecision } from './account.buying-power-decision';
 import { accountSecurity } from './account.security';
+import { accountInfoBank } from './info/account.info.bank';
+import { accountInfoDebit } from './info/account.info.debit';
+import { accountInfoDetails } from './info/account.info.details';
+import { accountInfoIncome } from './info/account.info.income';
 
 @NgModule({
   imports: [
@@ -32,6 +36,24 @@ import { accountSecurity } from './account.security';
     accountPageRoutingModule,
     MatExpansionModule,
   ],
-  declarations: [accountPage, accountProfile, accountPurchases, accountRefer, accountCoupons, accountHelp, accountFAQ, accountMakePayment, NavPage, accountInfo, accountBuyingPower, accountBuyingPowerForm, accountBuyingPowerDecision, accountSecurity]
+  declarations: [
+    accountPage,
+    accountProfile,
+    accountPurchases,
+    accountRefer,
+    accountCoupons,
+    accountHelp,
+    accountFAQ,
+    accountMakePayment,
+    NavPage,
+    accountInfo,
+    accountBuyingPower,
+    accountBuyingPowerForm,
+    accountBuyingPowerDecision,
+    accountSecurity,
+    accountInfoBank,
+    accountInfoDebit,
+    accountInfoDetails,
+    accountInfoIncome  ]
 })
 export class accountPageModule {}

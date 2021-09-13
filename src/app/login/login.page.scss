@@ -1,86 +1,89 @@
-.cloud {
-  z-index: 2;
-}
-.cloud2 {
-  z-index: 2;
-}
-.cloud3 {
-  z-index: 2;
-}
-.cloud4 {
-  z-index: 2;
-}
-.cloud4 {
-  z-index: 2;
-}
-.balloon {
-  z-index: 2;
-}
-.airplane {
-  z-index: 2;
-}
-.sailboat {
-  z-index: 2;
-}
-.boat {
-  z-index: 2;
-}
-.palms {
-  z-index: 2;
-}
-.outer {
-  overflow: hidden;
-  position: relative;
+.show{
+    display: none;
 }
 
-.inner {
+
+/*.bubble:after {
+  content: '';
   position: absolute;
-  height: 100px;
-  width: 100px;
-  right: -100px;
-  top: 50px;
-  z-index: 3;
+  left: 70%;
+  bottom: -50px;
+  border: 25px solid;
+  border-color: #333 transparent transparent #333;
 }
-.inner2 {
+*/
+
+.chat {
+  transform: scale(0);
+  position: relative;
+  background: #6976ec;
+  border-radius: .4em;
+  margin-bottom: 2em;
+  z-index: 999;
+}
+.chat:after {
+  content: '';
   position: absolute;
-  height: 100px;
-  width: 100px;
-  left: -30px;
-  top: 150px;
-  z-index: 3;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 22px solid transparent;
+  border-top-color: #6976ec;
+  border-bottom: 0;
+  border-right: 0;
+  margin-left: -11px;
+  margin-bottom: -22px;
 }
-.inner3 {
+.chat-finished {
+  transform: scale(0);
+  position: relative;
+  background: #6976ec;
+  border-radius: .4em;
+  margin-bottom: 2em;
+  opacity: .85;
+  z-index: 999;
+}
+.chat-finished1 {
+  transform: scale(0);
+  position: relative;
+  background: #6976ec;
+  border-radius: .4em;
+  margin-bottom: 2em;
+  opacity: .75;
+  z-index: 999;
+}
+.chat-finished2 {
+  transform: scale(0);
+  position: relative;
+  background: #6976ec;
+  border-radius: .4em;
+  margin-bottom: 2em;
+  opacity:.65;
+  z-index: 999;
+}
+.bubble {
+  position: relative;
+  background-color: rgb(255, 255, 255, 1);
+  border: 2px solid #333;
+  border-radius: 25px;
+  padding: 5px;
+  z-index: 999;
+  opacity: 1;
+}
+
+.tail{
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: 20%;
+}
+.transparent{
+    opacity: .5;
+}
+.background {
+  z-index: 10;
+  height: 100%;
+  width: 100%;
   position: absolute;
-  height: 100px;
-  width: 100px;
-  right: -10px;
-  top: 200px;
-  z-index: 3;
-}
-.inner4 {
-  position: absolute;
-  height: 100px;
-  width: 100px;
-  left: -50px;
-  top: 300px;
-  z-index:3;
-}
-.inner5 {
-  position: absolute;
-  height: 100px;
-  width: 100px;
-  right: -31px;
-  top: 325px;
-  z-index: 3;
-}
-.inner6 {
-  position: absolute;
-  height: 0px;
-  width: 100px;
-  right:0px;
-  top: 25px;
-  z-index: 3;
-}
-.foreground{
-    z-index: 99;
 }

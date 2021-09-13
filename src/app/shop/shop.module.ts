@@ -24,10 +24,11 @@ import { shopSpecialOffersLandingPage } from './shop.special-offers-landing';
 import { NavPage } from './nav/nav';
 import { CartPage } from './cart/cart.page';
 import { AgreementLandingPage } from './agreement/agreement.landing';
-import { AgreementFinancingPage } from './agreement/agreement.financing';
 import { AgreementSignaturePage } from './agreement/agreement.signature';
 import { AgreementReviewPage } from './agreement/agreement.review';
 import { AgreementFinalizingPage } from './agreement/agreement.finalizing';
+import { CartCheckoutPage } from './cart/cart.checkout';
+import { shopGetawaysOdenzaPage } from './shop.getaways.odenza';
 
 
 
@@ -41,10 +42,58 @@ import { AgreementFinalizingPage } from './agreement/agreement.finalizing';
     shopPageRoutingModule,
     MatExpansionModule,
   ],
-  declarations: [shopPage, shopVacationsPage, shopGetawaysPage, shopHowPage, shopStepsPage, shopRegistrationLandingPage, shopReadPage, shopTermsPage, shopCruisesPage, SpecialOffersPage, PrequalifyLandingPage, PrequalifyTermsPage, PrequalifyIncomePage, PrequalifyFinalizePage, shopPaymentAgreementPage, shopSpecialOffersLandingPage,NavPage,CartPage, AgreementLandingPage,AgreementFinancingPage,AgreementSignaturePage,AgreementReviewPage,AgreementFinalizingPage
+  declarations: [
+    shopPage,
+    shopVacationsPage,
+    shopGetawaysPage,
+    shopGetawaysOdenzaPage,
+    shopHowPage, 
+    shopStepsPage,
+    shopRegistrationLandingPage,
+    shopReadPage,
+    shopTermsPage,
+    shopCruisesPage,
+    SpecialOffersPage,
+    PrequalifyLandingPage,
+    PrequalifyTermsPage,
+    PrequalifyIncomePage,
+    PrequalifyFinalizePage,
+    shopPaymentAgreementPage,
+    shopSpecialOffersLandingPage,
+    NavPage,
+    CartPage,
+    CartCheckoutPage,
+    AgreementLandingPage,
+    AgreementSignaturePage,
+    AgreementReviewPage,
+    AgreementFinalizingPage
+
 
   ],
-  exports: [shopVacationsPage, shopGetawaysPage, shopHowPage, shopStepsPage, shopRegistrationLandingPage, shopReadPage, shopTermsPage, shopCruisesPage, SpecialOffersPage, PrequalifyLandingPage, PrequalifyTermsPage, PrequalifyIncomePage, PrequalifyFinalizePage, shopPaymentAgreementPage, shopSpecialOffersLandingPage, NavPage, CartPage, AgreementLandingPage,AgreementFinancingPage,AgreementSignaturePage,AgreementReviewPage,AgreementFinalizingPage
+  exports: [
+    shopVacationsPage,
+    shopGetawaysPage,
+    shopGetawaysOdenzaPage,
+    shopHowPage,
+    shopStepsPage,
+    shopRegistrationLandingPage,
+    shopReadPage,
+    shopTermsPage,
+    shopCruisesPage,
+    SpecialOffersPage,
+    PrequalifyLandingPage,
+    PrequalifyTermsPage,
+    PrequalifyIncomePage,
+    PrequalifyFinalizePage,
+    shopPaymentAgreementPage,
+    shopSpecialOffersLandingPage,
+    NavPage,
+    CartPage,
+    CartCheckoutPage,
+    AgreementLandingPage,
+    AgreementSignaturePage,
+    AgreementReviewPage,
+    AgreementFinalizingPage
 ]
 })
 export class shopPageModule {}

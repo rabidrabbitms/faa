@@ -18,7 +18,7 @@ export class shopGetawaysPage implements OnInit {
 
   trustedVideoUrl: SafeResourceUrl;
   array_of_objects = [{
-    vid_link: "https://www.youtube.com/embed/c-EAcNXQ7N4" }]
+    vid_link: "https://www.youtube.com/embed/c-EAcNXQ7N4?autoplay=1&enable_js=1" }]
 
 
 

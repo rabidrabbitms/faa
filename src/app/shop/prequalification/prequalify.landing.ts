@@ -60,5 +60,18 @@ export class PrequalifyLandingPage implements OnInit {
     }
 
   }
-
+  async open() {
+      const alert = await this.alertController.create({
+        header: 'Terms',
+        message: `You agree that we may obtain and verify your employment income, address(es), telephone number(s), and all other information about you with other
+				creditors, credit reporting agencies, service providers, employers, financial references, courts and government agencies.You understand and agree:
+          (1) that we may obtain consumer reports about you for purposes of reviewing your credit application; (2) that, if we extend credit to you, we may
+    also obtain consumer reports about you in the future for purposes of reviewing, updating, renewing, collecting and / or servicing your extension of
+    credit and for other legitimate purposes permitted by law; and(3) We may report information about your account to credit bureaus.Late payments,
+      missed payments, or other defaults on your account may be reflected in your credit report.We will, if you request, inform you whether we obtained a
+    consumer report about you and tell you the name and address of any consumer reporting agency that provided any such consumer report.`,
+        buttons: ['OK']
+      });
+      await alert.present();
+    }
 }

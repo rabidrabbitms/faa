@@ -1,18 +1,18 @@
 <nav></nav>
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="false">
   <ion-row>
     <ion-col>
       <ion-row class="ion-justify-content-center">
         <ion-text color="primary"><h3><strong>You qualify for First Avenu puchases up to:</strong></h3></ion-text>
       </ion-row>
       <ion-row class="ion-justify-content-center">
-        <ion-text><h1><strong>$XX,XXX.XX</strong></h1></ion-text>
+        <ion-text><h1 class="h1"><strong>$XX,XXX.XX</strong></h1></ion-text>
       </ion-row>
       <ion-row class="ion-justify-content-center">
-        <ion-text color="primary"><h3><strong>You've Never Had Purchasing Power Like This:</strong></h3></ion-text>
+        <ion-text class="body-header"><h3><strong>You've Never Had Purchasing Power Like This:</strong></h3></ion-text>
       </ion-row>
       <ion-row>
-        <ion-text color="primary">
+        <ion-text class="body-body">
           <ul>
             <li>No interest payments</li>
             <li>Affordable payments tied to your pay cycle.</li>
@@ -22,10 +22,10 @@
         </ion-text>
       </ion-row>
       <ion-row class="ion-justify-content-center">
-        <ion-text color="primary"><h3><strong>You are just a click away from more flexible purchases to suit your lifestyle.</strong></h3></ion-text>
+          <ion-text style="margin:2em;"color="primary"><h3><strong>You are just a click away from more flexible purchases to suit your lifestyle.</strong></h3></ion-text>
       </ion-row>
       <ion-row class="ion-justify-content-center">
-        <ion-button color="tertiary" (click)="routeHome()">Yes! I want my FA Purchasing Power!</ion-button>
+        <ion-button color="tertiary" expand="full" style="min-width:75%" (click)="routeHome()">Shop Now</ion-button>
       </ion-row>
     </ion-col>
   </ion-row>

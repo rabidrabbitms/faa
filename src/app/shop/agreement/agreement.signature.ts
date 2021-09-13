@@ -36,7 +36,7 @@ export class AgreementSignaturePage implements OnInit, AfterViewInit{
   public ngAfterViewInit(): void {
     this.signaturePad = new SignaturePad(this.signaturePadElement.nativeElement);
     this.signaturePad.clear();
-    this.signaturePad.penColor = 'rgb(56,128,255)';
+    this.signaturePad.penColor = 'rgb(0,0,0)';
   }
 
   isCanvasBlank(): boolean {

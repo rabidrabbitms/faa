@@ -14,10 +14,11 @@ import { shopPaymentAgreementPage } from './shared-components/shop.payment-agree
 import { shopSpecialOffersLandingPage } from './shop.special-offers-landing';
 import { CartPage } from './cart/cart.page';
 import { AgreementLandingPage } from './agreement/agreement.landing';
-import { AgreementFinancingPage } from './agreement/agreement.financing';
 import { AgreementSignaturePage } from './agreement/agreement.signature';
 import { AgreementReviewPage } from './agreement/agreement.review';
 import { AgreementFinalizingPage } from './agreement/agreement.finalizing';
+import { CartCheckoutPage } from './cart/cart.checkout';
+import { shopGetawaysOdenzaPage } from './shop.getaways.odenza';
 
 const routes: Routes = [
   {
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path: 'getaways',
     component: shopGetawaysPage
+  },
+  {
+    path: 'getaways-odenza',
+    component: shopGetawaysOdenzaPage
   },
   {
     path: 'registration-landing',
@@ -69,10 +74,6 @@ const routes: Routes = [
     component: AgreementLandingPage
   },
   {
-    path: 'agreement-financing',
-    component: AgreementFinancingPage
-  },
-  {
     path: 'agreement-signature',
     component: AgreementSignaturePage
   },
@@ -91,6 +92,10 @@ const routes: Routes = [
   {
     path: 'cart',
     component: CartPage
+  },
+  {
+    path: 'cart-checkout',
+    component: CartCheckoutPage
   }
 ];
 

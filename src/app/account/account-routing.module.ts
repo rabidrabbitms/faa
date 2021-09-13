@@ -13,6 +13,10 @@ import { accountProfile } from './account.profile';
 import { accountPurchases } from './account.purchases';
 import { accountRefer } from './account.refer';
 import { accountSecurity } from './account.security';
+import { accountInfoDetails } from './info/account.info.details';
+import { accountInfoDebit } from './info/account.info.debit';
+import { accountInfoBank } from './info/account.info.bank';
+import { accountInfoIncome } from './info/account.info.income';
 
 const routes: Routes = [
   {
@@ -26,6 +30,22 @@ const routes: Routes = [
   {
     path: 'info',
     component: accountInfo
+  },
+  {
+    path: 'info-details',
+    component: accountInfoDetails
+  },
+  {
+    path: 'info-debit',
+    component: accountInfoDebit
+  },
+  {
+    path: 'info-bank',
+    component: accountInfoBank
+  },
+  {
+    path: 'info-income',
+    component: accountInfoIncome
   },
   {
     path: 'purchases',

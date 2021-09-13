@@ -1,5 +1,5 @@
 <nav></nav>
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="false">
   <ion-row>
     <ion-col>
       <ion-text color="primary">
@@ -10,35 +10,89 @@
       <ion-text style="padding-left:6em;"><a>Log Out</a></ion-text>
     </ion-col>
   </ion-row>
-    <ion-card>
-      <ion-row>
-        <ion-col>
-          <ion-row class="ion-justify-content-center">
-            <img src="../assets/Binoculars.svg" />
-          </ion-row>
-          <ion-row style="margin-top:2em;">
-            <ion-col>
-              <ion-button expand="full" color="light">
-                <ion-text>Password Reset</ion-text>
-              </ion-button>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <ion-row style="border:.5px solid black">
-                <ion-col size="8">
-                  <ion-row style="margin-top:3px">
-                    <ion-text style="padding-top:6px;">Use Face ID?</ion-text>
-                  </ion-row>
-                </ion-col>
-                <ion-col>
-                  <ion-toggle [(ngModel)]="faceID" (ionChange)="face()"></ion-toggle>
-                </ion-col>
+  <ion-card>
+    <ion-row>
+      <ion-col>
+        <ion-row class="ion-justify-content-center">
+          <img src="../assets/Binoculars.svg" />
+        </ion-row>
+        <ion-row style="margin-top:2em;">
+          <ion-col>
+            <ion-button expand="full" color="light">
+              <ion-text>Password Reset</ion-text>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="8">
+            <ion-row>
+              <ion-row style="margin-top:3px">
+                <ion-text style="padding-top:6px;">Use Face ID?</ion-text>
               </ion-row>
-            </ion-col>
-          </ion-row>
-        </ion-col>
-      </ion-row>
-    </ion-card>
+            </ion-row>
+          </ion-col>
+          <ion-col>
+            <ion-toggle [(ngModel)]="faceID" (ionChange)="face()"></ion-toggle>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-row>
+          <ion-col size="8">
+            <ion-row style="margin-top:3px">
+              <ion-text style="padding-top:6px;">Use Finger Print?</ion-text>
+            </ion-row>
+          </ion-col>
+          <ion-col>
+            <ion-toggle [(ngModel)]="fingerPrint" (ionChange)="finger()"></ion-toggle>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-row>
+          <ion-col size="8">
+            <ion-row style="margin-top:3px">
+              <ion-text style="padding-top:6px;">Enable Push Notifications?</ion-text>
+            </ion-row>
+          </ion-col>
+          <ion-col>
+            <ion-toggle></ion-toggle>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-row>
+          <ion-col size="8">
+            <ion-row style="margin-top:3px">
+              <ion-text style="padding-top:6px;">Opt in for sms communications?</ion-text>
+            </ion-row>
+          </ion-col>
+          <ion-col>
+            <ion-toggle></ion-toggle>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-row>
+          <ion-col size="8">
+            <ion-row style="margin-top:3px">
+              <ion-text style="padding-top:6px;">Opt in for Email communications?</ion-text>
+            </ion-row>
+          </ion-col>
+          <ion-col>
+            <ion-toggle></ion-toggle>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-card>
   <app-explore-container name="account page"></app-explore-container>
 </ion-content>

@@ -20,4 +20,11 @@ import { NavPage } from '../shop/nav/nav';
   ],
   declarations: [messagesPage, messagesLanding, NavPage]
 })
-export class messagesPageModule {}
+
+export class messagesPageModule {
+  slideOptsOne = {
+    initialSlide: 0,
+    slidesPerView: 1,
+    autoplay: true,
+    speed: 400
+  };}

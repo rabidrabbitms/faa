@@ -1,52 +1,43 @@
 <nav></nav>
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="false">
   <ion-row>
     <ion-col>
       <ion-text color="primary">
-        <h1>My Profile</h1>
+        <h1 class="header">My Profile</h1>
       </ion-text>
-    </ion-col>
-    <ion-col>
-      <ion-text style="padding-left:6em;"><a>Log Out</a></ion-text>
     </ion-col>
   </ion-row>
   <ion-card>
     <ion-row>
       <ion-col>
         <ion-row class="ion-justify-content-center">
-          <img src="../assets/user-circle.svg" />
+          <img src="../assets/Lookylooky.svg" />
         </ion-row>
-        <ion-row class="ion-justify-content-center">
-          <h1 class="header1">[Full Name]</h1>
-        </ion-row>
-        <ion-row class="ion-justify-content-center">
-          <ion-text class="body-header"><a>Edit Pic</a></ion-text>
-        </ion-row>
-        <ion-row style="margin-top:2em;">
+        <ion-row>
           <ion-col>
-            <ion-button expand="full" color="light" routerLink="../info">
-              <ion-text>My Info</ion-text>
+            <ion-button expand="full" color="medium" routerLink="../info">
+              <ion-text class="ion-text-left">My Info</ion-text><img src="../assets/ArrowRight.svg" />
             </ion-button>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
-            <ion-button expand="full" color="light" routerLink="../payment">
-              <ion-text>Make A Payment</ion-text>
+            <ion-button expand="full" color="medium" routerLink="../payment">
+              <ion-text class="ion-text-left">Make A Payment</ion-text><img src="../assets/ArrowRight.svg" />
             </ion-button>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
-            <ion-button expand="full" color="light" routerLink="../buying-power">
-              <ion-text>Buying Power</ion-text>
+            <ion-button expand="full" color="medium" routerLink="../buying-power">
+              <ion-text class="ion-text-left">Buying Power</ion-text><img src="../assets/ArrowRight.svg" />
             </ion-button>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
-            <ion-button expand="full" color="light" routerLink="../security">
-              <ion-text>Security Settings</ion-text>
+            <ion-button expand="full" color="medium" routerLink="../security">
+              <ion-text class="ion-text-left">Security Settings</ion-text><img src="../assets/ArrowRight.svg" />
             </ion-button>
           </ion-col>
         </ion-row>

@@ -1,11 +1,22 @@
 <nav></nav>
 
-<ion-content [fullscreen]="true">
-
+<ion-content [fullscreen]="false">
   <ion-row>
-    <ion-text class="body-body"><strong>Upgrade your buying power!</strong> Have you had an increase in income or have less expenses than when you first applied? See if your buying power can be increased by updating your information below.</ion-text>
+    <ion-col>
+      <ion-text class="body-body"><strong>Upgrade your buying power!</strong> Have you had an increase in income or have less expenses than when you first applied? See if your buying power can be increased by updating your information below.</ion-text>
+    </ion-col>
   </ion-row>
   <ion-row>
+    <ion-col size="8">
+      <ion-row style="margin-top:3px">
+        <ion-text style="padding-top:6px;">Update income?</ion-text>
+      </ion-row>
+    </ion-col>
+    <ion-col>
+      <ion-toggle [(ngModel)]="income" (ionChange)="Open('income')"></ion-toggle>
+    </ion-col>
+  </ion-row>
+  <ion-row *ngIf="income">
     <ion-col>
       <ion-card>
         <ion-row>
@@ -40,7 +51,17 @@
       </ion-card>
     </ion-col>
   </ion-row>
-  <ion-card>
+  <ion-row>
+    <ion-col size="8">
+      <ion-row style="margin-top:3px">
+        <ion-text style="padding-top:6px;">Update bank?</ion-text>
+      </ion-row>
+    </ion-col>
+    <ion-col>
+      <ion-toggle [(ngModel)]="bank" (ionChange)="Open('bank')"></ion-toggle>
+    </ion-col>
+  </ion-row>
+  <ion-card *ngIf="bank">
     <ion-card>
       <ion-row>
         <ion-col>

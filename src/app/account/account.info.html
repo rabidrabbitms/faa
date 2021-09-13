@@ -1,240 +1,48 @@
 <nav></nav>
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="false">
   <ion-row>
     <ion-col>
       <ion-text color="primary">
-        <h1>My Info</h1>
+        <h1 class="header">My Info</h1>
       </ion-text>
-    </ion-col>
-    <ion-col>
-      <ion-text style="padding-left:6em;"><a>Log Out</a></ion-text>
-    </ion-col>
-  </ion-row>
-  <ion-row style="background-color: rgba(105, 118, 236, 1)">
-    <ion-col (click)="select('detail')">
-      <ion-text [style.color]="detail ? 'black' : 'white'">Details</ion-text>
-    </ion-col>
-    <ion-col (click)="select('income')">
-      <ion-text [style.color]="income ? 'black' : 'white'">Income</ion-text>
-    </ion-col>
-    <ion-col (click)="select('bank')">
-      <ion-text [style.color]="bank ? 'black' : 'white'">Bank</ion-text>
-    </ion-col>
-    <ion-col (click)="select('debit')">
-      <ion-text [style.color]="debit ? 'black' : 'white'">Debit</ion-text>
     </ion-col>
   </ion-row>
   <ion-card>
-    <div *ngIf="detail">
-      <ion-row>
-        <ion-text class="body-header">Account Details</ion-text>
-      </ion-row>
-      <ion-row style="margin-top:1em;">
-        <ion-text class="body-body">[First Name]   [Last Name]</ion-text>
-      </ion-row>
-      <ion-row style="margin-top:2em;">
-        <ion-col>
-          <ion-input typeof="street-address" style="border-bottom:1px solid lightgrey;" placeholder="Address">
-          </ion-input>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-input typeof="address-level2" style="border-bottom:1px solid lightgrey;" placeholder="Apt\Ste.">
-          </ion-input>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <select class="stateSelect">
-            <option style="opacity:.5">State</option>
-            <option *ngFor="let state of states">{{state}}</option>
-          </select>
-        </ion-col>
-        <ion-col>
-          <ion-input typeof="postal-code" style="border-bottom:1px solid lightgrey;" placeholder="Zip Code">
-          </ion-input>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-input typeof="tel-area-code" style="border-bottom:1px solid lightgrey;" placeholder="Mobile Phone">
-          </ion-input>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-input typeof="tel-area-code" style="border-bottom:1px solid lightgrey;" placeholder="Work Phone">
-          </ion-input>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-input typeof="tel-area-code" style="border-bottom:1px solid lightgrey;" placeholder="Landline Phone">
-          </ion-input>
-        </ion-col>
-      </ion-row>
-      <ion-row style="margin-top:1em;" class="ion-justify-content-center">
+    <ion-row>
+      <ion-col>
         <ion-row class="ion-justify-content-center">
-          <ion-col size="1">
-            <ion-checkbox></ion-checkbox>
-          </ion-col>
+          <img src="../assets/Lookylooky.svg" />
+        </ion-row>
+        <ion-row>
           <ion-col>
-            <ion-text style="padding: 5px;" class="agreement-check">Receive content via Email</ion-text>
+            <ion-button expand="full" color="medium" routerLink="../info-details">
+              <ion-text class="ion-text-left">Details</ion-text><img src="../assets/ArrowRight.svg" />
+            </ion-button>
           </ion-col>
         </ion-row>
-        <ion-row class="ion-justify-content-center">
-          <ion-col size="1">
-            <ion-checkbox></ion-checkbox>
-          </ion-col>
+        <ion-row>
           <ion-col>
-            <ion-text style="padding: 5px;" class="agreement-check">Receive content via sms</ion-text>
+            <ion-button expand="full" color="medium" routerLink="../info-income">
+              <ion-text class="ion-text-left">Income</ion-text><img src="../assets/ArrowRight.svg" />
+            </ion-button>
           </ion-col>
         </ion-row>
-      </ion-row>
-      <ion-row class="ion-justify-content-center">
-        <ion-button color="tertiary" expand="full">Save</ion-button>
-      </ion-row>
-    </div>
-    <div *ngIf="income">
-      <ion-row>
-        <ion-text class="body-header">Account Income</ion-text>
-      </ion-row>
-      <ion-row>
-        <ion-text class="body-header">Primary</ion-text>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-row>
-            <ion-text class="body-body">Company:</ion-text>
-          </ion-row>
-          <ion-row>
-            <ion-text>[Company]</ion-text>
-          </ion-row>
-        </ion-col>
-        <ion-col>
-          <ion-row>
-            <ion-text class="body-body">Job Title:</ion-text>
-          </ion-row>
-          <ion-row>
-            <ion-text>[Job title]</ion-text>
-          </ion-row>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-row>
-            <ion-text class="body-body">Company:</ion-text>
-          </ion-row>
-          <ion-row>
-            <ion-text>[Company]</ion-text>
-          </ion-row>
-        </ion-col>
-        <ion-col>
-          <ion-row>
-            <ion-text class="body-body">Job Title:</ion-text>
-          </ion-row>
-          <ion-row>
-            <ion-text>[Job title]</ion-text>
-          </ion-row>
-        </ion-col>
-      </ion-row>
-      <ion-row style="margin-top:1em;">
-        <ion-text class="body-header">Your Income(s)</ion-text>
-      </ion-row>
-      <ion-row style="border:.5px solid black; margin-top:1em;">
-        <ion-col>
-          <ion-text class="body-body">[Name of Income]</ion-text>
-        </ion-col>
-        <ion-col>
-          <ion-text class="body-body">[$ Amount]</ion-text>
-        </ion-col>
-      </ion-row>
-      <ion-row style="margin-top:1em;">
-        <ion-col>
-          <ion-text class="body-body">TOTAL Net Monthly Income:</ion-text>
-        </ion-col>
-        <ion-col>
-          <ion-text class="body-body">[$ Amount]</ion-text>
-        </ion-col>
-      </ion-row>
-      <ion-row class="ion-justify-content-center" style="margin-top:1em;">
-        <ion-button color="tertiary" expand="full">Add An Income</ion-button>
-      </ion-row>
-      <ion-row class="ion-justify-content-center" style="margin-top:2em">
-        <ion-text class="body-header">Upload Supporting Documents</ion-text>
-      </ion-row>
-      <ion-row style="margin-top:1em">
-        <ion-button expand="full">
-          <input type="file" (change)="loadImageFromDevice($event)"
-                 accept="image/png, image/jpeg">
-        </ion-button>
-      </ion-row>
-    </div>
-    <div *ngIf="bank">
-      <ion-row>
-        <ion-col size="8">
-          <ion-text class="body-header">Primary Bank</ion-text>
-        </ion-col>
-        <ion-col size="4">
-          <ion-text class="body-header"><a>Unverified</a></ion-text>
-        </ion-col>
-      </ion-row>
-      <ion-row style="margin-top:2em;">
-        <ion-text class="body-body">[Primary Bank Name] ending in [last 4]</ion-text>
-      </ion-row>
-      <ion-row style="margin-top:2em;">
-        <ion-text class="body-header">Your Bank Account(s)</ion-text>
-      </ion-row>
-      <ion-row style="border:.5px solid black; margin-top:1em">
-        <ion-col size="8">
-          <ion-text>[Bank Name]</ion-text>
-        </ion-col>
-        <ion-col size="4">
-          <ion-text>[last 4]</ion-text>
-        </ion-col>
-      </ion-row>
-      <ion-row style="border:.5px solid black; margin-top:.5em">
-        <ion-col size="8">
-          <ion-text>[Bank Name]</ion-text>
-        </ion-col>
-        <ion-col size="4">
-          <ion-text>[last 4]</ion-text>
-        </ion-col>
-      </ion-row>
-      <ion-row class="ion-justify-content-center" style="margin-top:1em;">
-        <ion-button color="tertiary" expand="full">Add A Bank Account</ion-button>
-      </ion-row>
-    </div>
-    <div *ngIf="debit">
-      <ion-row>
-        <ion-col size="8">
-          <ion-text class="body-header">Primary Card</ion-text>
-        </ion-col>
-        <ion-col size="4">
-          <ion-text class="body-header"><a>Unverified</a></ion-text>
-        </ion-col>
-      </ion-row>
-      <ion-row style="margin-top:2em;">
-        <ion-text class="body-body">Card ending in [last 4]</ion-text>
-      </ion-row>
-      <ion-row style="margin-top:2em;">
-        <ion-text class="body-header">Your Debit Card(s)</ion-text>
-      </ion-row>
-      <ion-row style="border:.5px solid black; margin-top:1em">
-        <ion-col size="8">
-          <ion-text>Card ending in [Last 4]</ion-text>
-        </ion-col>
-      </ion-row>
-      <ion-row style="border:.5px solid black; margin-top:1em">
-        <ion-col size="8">
-          <ion-text>Card ending in [Last 4]</ion-text>
-        </ion-col>
-      </ion-row>
-      <ion-row class="ion-justify-content-center" style="margin-top:1em;">
-        <ion-button color="tertiary" expand="full">Add A Debit Card</ion-button>
-      </ion-row>
-    </div>
+        <ion-row>
+          <ion-col>
+            <ion-button expand="full" color="medium" routerLink="../info-bank">
+              <ion-text class="ion-text-left">Bank</ion-text><img src="../assets/ArrowRight.svg" />
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button expand="full" color="medium" routerLink="../info-debit">
+              <ion-text class="ion-text-left">Debit</ion-text><img src="../assets/ArrowRight.svg" />
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
   </ion-card>
   <app-explore-container name="account page"></app-explore-container>
 </ion-content>

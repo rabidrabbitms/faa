@@ -1,58 +1,65 @@
 <ion-content>
-  <ion-col>
-    <ion-row class="ion-justify-content-center" style="padding-top:.5em">
-      <img class="chat1" src="../assets/LookyTalkRegister.svg"/>
-    </ion-row>
-    <ion-row class="ion-justify-content-center">
-      <img class="looky" src="../assets/Lookylooky.svg" />
-      <img class="marquee" src="../assets/FirstAvenulogin.svg" style="padding-top:5px" />
-    </ion-row>
-    <ion-row style="padding:0em">
-      <ion-col  style="padding:0em">
-        <ion-card>
-          <ion-row>
-            <ion-col>
-              <ion-input class="registration-input" placeholder="First Name" style="border-bottom:1px solid lightgrey; height:min-content"></ion-input>
-            </ion-col>
-            <ion-col>
-              <ion-input class="registration-input" placeholder="Last Name" style="border-bottom:1px solid lightgrey;"></ion-input>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <ion-input class="registration-input" inputmode="email" typeof="email" max="100" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})" style="border-bottom:1px solid lightgrey;" placeholder="Email">
-              </ion-input>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <ion-input class="registration-input" typeof="new-password" min="8" max="100" style="border-bottom:1px solid lightgrey;" placeholder="Password">
-              </ion-input>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <ion-input class="registration-input" typeof="new-password" min="8" max="100" style="border-bottom:1px solid lightgrey;" placeholder="Confirm Password">
-              </ion-input>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col size="4">
-              <ion-input class="registration-input" typeof="postal-code" style="border-bottom:1px solid lightgrey;" placeholder="Zip Code">
-              </ion-input>
-            </ion-col>
-          </ion-row>
-        </ion-card>
+  <ion-grid style="position: absolute; top: 0; left: 0; min-width:100%; min-height:800px;">
+    <app-login-background class="background"></app-login-background>
+  </ion-grid>
+  <ion-grid  style="position: absolute; top: 0; left: 0;">
+    <ion-row style="margin-top:12em;">
+      <ion-col>
+        <ion-row class="ion-justify-content-center" style="padding-top:.5em">
+          <img class="chat1" src="../assets/LookyTalkRegister.svg" style="z-index:999" />
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <img class="looky" src="../assets/Lookylooky.svg"style="z-index:999" />
+          <img class="marquee" src="../assets/FirstAvenulogin.svg" style="padding-top:5px; z-index:999" />
+        </ion-row>
+        <ion-row style="padding:0em">
+          <ion-col style="padding:0em">
+            <ion-card>
+              <ion-row>
+                <ion-col>
+                  <ion-input class="registration-input" placeholder="First Name" style="border-bottom:1px solid lightgrey;z-index:999; height:min-content"></ion-input>
+                </ion-col>
+                <ion-col>
+                  <ion-input class="registration-input" placeholder="Last Name" style="border-bottom: 1px solid lightgrey; z-index: 999;"></ion-input>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-input class="registration-input" inputmode="email" typeof="email" max="100" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})" style="border-bottom: 1px solid lightgrey; z-index: 999;" placeholder="Email">
+                  </ion-input>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-input class="registration-input" typeof="new-password" min="8" max="100" style="border-bottom: 1px solid lightgrey; z-index: 999;" placeholder="Password">
+                  </ion-input>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-input class="registration-input" typeof="new-password" min="8" max="100" style="border-bottom: 1px solid lightgrey; z-index: 999;" placeholder="Confirm Password">
+                  </ion-input>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="4">
+                  <ion-input class="registration-input" typeof="postal-code" style="border-bottom: 1px solid lightgrey; z-index: 999;" placeholder="Zip Code">
+                  </ion-input>
+                </ion-col>
+              </ion-row>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <ion-text style="z-index: 999;">There is no obligation to make any purchase</ion-text>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <ion-button style="z-index: 999;" color="tertiary" expand="full" routerLink="../verify">Show Me More!</ion-button>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <ion-text style="z-index: 999;">Already a member? <a href="signin">Login here</a></ion-text>
+        </ion-row>
       </ion-col>
     </ion-row>
-    <ion-row class="ion-justify-content-center">
-      <ion-text>There is no obligation to make any purchase</ion-text>
-    </ion-row>
-    <ion-row class="ion-justify-content-center">
-      <ion-button color="tertiary" expand="full" routerLink="../verify">Show Me More!</ion-button>
-    </ion-row>
-    <ion-row class="ion-justify-content-center">
-      <ion-text>Already a member? <a href="signin">Login here</a></ion-text>
-    </ion-row>
-  </ion-col>
+  </ion-grid>
 </ion-content>

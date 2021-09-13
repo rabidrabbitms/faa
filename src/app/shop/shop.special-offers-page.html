@@ -2,7 +2,7 @@
 
 
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="false">
   <div id="welcome-header">
     <ion-grid>
       <ion-row>
@@ -65,25 +65,26 @@
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-button color="tertiary" expand="full" routerLink="../payment-agreement">Buy Now</ion-button>
-        </ion-col>
-        <ion-col>
           <ion-button color="tertiary" expand="full" routerLink="../payment-agreement">Add to Cart</ion-button>
         </ion-col>
       </ion-row>
       <ion-row>
         <mat-accordion>
-          <mat-expansion-panel>
+          <mat-expansion-panel [expanded]="true">
             <mat-expansion-panel-header>
               <mat-panel-title>
                 Description
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <ion-text class="body-body">
-              This Silver, latest model, 32GB Wi-Fi enabled, Apple iPad features: 10.2-inch Retina display,
-              Touch ID fingerprint sensor, 8MP back camera, 1.2MP FaceTime HD front camera, Up to 10 hours of battery life,
-              Lightning connector for charging and accessories. Support for Smart Keyboard and Apple Pencil.
-            </ion-text>
+            <ion-row>
+              <ion-col>
+                <ion-text class="body-body">
+                  This Silver, latest model, 32GB Wi-Fi enabled, Apple iPad features: 10.2-inch Retina display,
+                  Touch ID fingerprint sensor, 8MP back camera, 1.2MP FaceTime HD front camera, Up to 10 hours of battery life,
+                  Lightning connector for charging and accessories. Support for Smart Keyboard and Apple Pencil.
+                </ion-text>
+              </ion-col>
+            </ion-row>
           </mat-expansion-panel>
         </mat-accordion>
       </ion-row>

@@ -1,6 +1,6 @@
 <nav></nav>
-<ion-content [fullscreen]="true">
-  <div id="vacation-welcome" >
+<ion-content [fullscreen]="false">
+  <div id="vacation-welcome">
     <ion-grid>
       <ion-row>
         <ion-col>
@@ -12,19 +12,19 @@
   </div>
   <div id="container" style="align-content:center">
     <ion-grid>
-      <ion-row>
+      <ion-row class="ion-justify-content-center">
         <ion-col>
           <h2 style="font-weight: 300; font-size: 28px !important;">Product 1</h2>
-            <img class="getaway" src="../assets/SpecialOffers2.svg" />
-            <ion-button class="button" expand="full" color="light" routerLink="../shop-special-offers-page">Product Tagline</ion-button>
-         </ion-col>
+          <img class="getaway" src="../assets/SpecialOffers2.svg" />
+        </ion-col>
+        <ion-button class="button" expand="full" style="min-width:75%; margin-top:-2em;" color="light" routerLink="../shop-special-offers-page">Product Tagline</ion-button>
       </ion-row>
-      <ion-row>
+      <ion-row class="ion-justify-content-center">
         <ion-col>
           <h2 style="font-weight: 300; font-size: 28px !important;">Product 2</h2>
-            <img class="cruise" src="../assets/SpecialOffers3.svg" />
-            <ion-button class="button" expand="full" color="light" routerLink="../shop-special-offers-page">Product Tagline</ion-button>
-</ion-col>
+          <img class="cruise" src="../assets/SpecialOffers3.svg" />
+        </ion-col>
+        <ion-button class="button" expand="full" style="min-width:75%; margin-top:-2em;" color="light" routerLink="../shop-special-offers-page">Product Tagline</ion-button>
       </ion-row>
     </ion-grid>
   </div>

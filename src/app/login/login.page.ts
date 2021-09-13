@@ -1,60 +1,98 @@
 import { Component, OnInit } from '@angular/core';
-import { Animation, AnimationController, AlertController } from '@ionic/angular';
+import { Animation, AnimationController } from '@ionic/angular';
 
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-login-page',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
+
 export class LoginPage implements OnInit {
 
-  constructor(private animationCtrl: AnimationController, public alertController: AlertController) {
+  constructor(private animationCtrl: AnimationController) {
   }
-
+  chats: Array<Chat> = [];
   ngOnInit() {
-    this.createAnimation('.cloud', 'horizontal', '0', '1000', 100000);
-    this.createAnimation('.cloud2', 'horizontal', '0', '1000', 200000);
-    this.createAnimation('.cloud3', 'horizontal', '0', '1000', 300000);
-    this.createAnimation('.cloud4', 'horizontal', '0', '1000', 100000);
-    this.createAnimation('.cloud5', 'horizontal', '0', '1000', 200000);
-    this.createAnimation('.cloud6', 'horizontal', '0', '-1000', 200000);
-    this.createAnimation('.cloud7', 'horizontal', '0', '1000', 200000);
-    this.createAnimation('.cloud8', 'horizontal', '0', '1000', 200000);
-    this.createAnimation('.balloon', 'horizontal', '0', '1000',100000);
-    this.createAnimation('.airplane', 'horizontal', '0', '-1000',50000);
-    this.createAnimation('.sailboat', 'horizontal', '0', '-1000', 900000);
-    this.createAnimation('.boat', 'horizontal', '0', '10000', 800000);
-  }
-  createAnimation(element: string,movementStyle: string, movementStart: string, movementEnd: string,duration: number) {
-    if (movementStyle == 'vertical') {
-      const animation: Animation = this.animationCtrl.create()
-        .addElement(document.querySelector(element))
-        .duration(duration)
-        .iterations(Infinity)
+
+    this.chats = [
+      new Chat(1, "Hi, I'm Looky! I'm always looking out for great values for you", "Hi, I'm Looky!  ...", false, true),
+      new Chat(2, "You can select from a wide range of vacation options made affordable through easy payments with no interest.", "You can select from  ...", false, true),
+      new Chat(3, "Plus, every quarter we offer limited-availability special buys of cool products available with easy payments with no interest.", "Plus every quarter we offer  ...", false, true),
+      new Chat(4, "Sign up today - there is no obligation to buy!", "Sign up today  ...", false,true)
+    ]
+    //this.ArrayPlusDelay(this.chats, function (obj) { obj.Hidden = false; obj.Selected = true; }, 5000);
+
+    let counter = 1;
+    const timer = setInterval(() => {
+      if (counter > (this.chats.length-1))
+        clearInterval(timer);
+      if (counter > 1) {
+        const previousElem = document.getElementById("chat" + (counter - 2).toString());
+        this.chats[counter - 2].Selected = false;
+        const moveChat =
+          this.animationCtrl.create()
+            .addElement(previousElem)
+            .duration(750)
+            .easing('ease-in')
+            .fromTo('transform', 'translateY(150px)', 'translateY(0px)');
+        moveChat.play();
+      }
+
+      const chat = this.chats[counter - 1];
+    
+      chat.Hidden = false;
+      chat.Selected = true;
+
+      const elem = document.getElementById("chat" + (counter - 1).toString());
+
+      const animation = this.animationCtrl.create()
+        .addElement(elem)
+        .duration(4500)
+        .beforeStyles({top:'75px'})
         .easing('ease-in')
-        .fromTo('transform', 'translateX(' + movementStart + 'px)', 'translateX(' + movementEnd + 'px)');
+        .fromTo('transform', '150px','150px');
       animation.play();
-    }
-    if (movementStyle == 'horizontal') {
-      const animation: Animation = this.animationCtrl.create()
-        .addElement(document.querySelector(element))
-        .duration(duration)
-        .iterations(Infinity)
-        .easing('ease-in')
-        .fromTo('transform', 'translateX(' + movementStart + 'px)', 'translateX(' + movementEnd + 'px)');
-      animation.play();
-    }
-    else {
-      const animation: Animation = this.animationCtrl.create()
-        .addElement(document.querySelector(element))
-        .duration(duration)
-        .iterations(Infinity)
-        .fromTo('transform', 'rotate(' + movementStart + 'deg)', 'rotate(' + movementEnd + 'deg)');
-      animation.play();
-    }
+
+      counter++;
+    }, 5000);
     
   }
 
 
+  showChat(chat) {
+    chat.Selected = true;
+    chat.Hidden = false;
+  }
+
+  selectChat(chat) {
+    for (let c of this.chats) {
+      c.Selected = false;
+    }
+    chat.Selected = true;
+  }
+
+  createAnimation(element: string, movementStart: string, movementEnd: string, duration: number) {
+      const animation: Animation = this.animationCtrl.create()
+        .addElement(document.querySelector(element))
+        .duration(duration)
+        .easing('ease-in')
+        .fromTo('transform', 'translateY(' + movementStart + 'px)', 'translateY(' + movementEnd + 'px)');
+      animation.play();   
+  }
+
+}
+class Chat {
+  Order: number;
+  LongText: string;
+  ShortText: string;
+  Selected: boolean;
+  Hidden: boolean;
+  constructor(order, longText, shortText, selected, hidden) {
+    this.Order = order;
+    this.LongText = longText;
+    this.ShortText = shortText;
+    this.Selected = selected;
+    this.Hidden = hidden;
+  }
 }

@@ -1,6 +1,6 @@
 <nav></nav>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="false">
   <ion-row class="ion-justify-content-center">
     <ion-col>
       <h2>
@@ -12,20 +12,20 @@
     </ion-col>
   </ion-row>
   <ion-row>
-    <ion-card>
+    <ion-card style="width:100%">
       <ion-row class="ion-justify-content-center">
         <ion-col>
           <ion-row>
-            <p>Purchase Disclosure Agrement <a href="">view here</a></p>
+            <p>Purchase Disclosure Agrement <a (click)="open('pda')">view here</a></p>
           </ion-row>
           <ion-row style="padding-top:1em">
-            <ion-checkbox></ion-checkbox> <ion-label style="padding-left:.5em; font-size:small;">I agree to the <a href="./prequalify-terms">privacy policy</a></ion-label>
+            <ion-checkbox></ion-checkbox> <ion-label style="padding-left:.5em; font-size:small;">I agree to the <a (click)="open('pp')">privacy policy</a></ion-label>
           </ion-row>
           <ion-row style="padding-top:2em">
-            <ion-checkbox></ion-checkbox> <ion-label style="padding-left: .5em; font-size: small;">I expressly authorize the <a href="./prequalify-terms">sharing of data</a></ion-label>
+            <ion-checkbox></ion-checkbox> <ion-label style="padding-left: .5em; font-size: small;">I expressly authorize the <a (click)="open('sod')">sharing of data</a></ion-label>
           </ion-row>
           <ion-row style="padding-top:2em">
-            <ion-checkbox></ion-checkbox> <ion-label style="padding-left: .5em; font-size: small;">I consent to the <a href="./prequalify-terms">marketing policy</a></ion-label>
+            <ion-checkbox></ion-checkbox> <ion-label style="padding-left: .5em; font-size: small;">I consent to the <a (click)="open('sms')">marketing policy</a></ion-label>
           </ion-row>
           <ion-row style="padding-top:2em">
             <ion-checkbox></ion-checkbox> <ion-label style="padding-left: .5em; font-size: small;">I provided correct and accurate information</ion-label>
@@ -35,7 +35,7 @@
     </ion-card>
   </ion-row>
   <ion-row class="ion-justify-content-center" style="padding-top:2em">
-    <ion-button color="tertiary" routerLink="../prequalify-finalize">I Agree</ion-button>
+    <ion-button color="tertiary" expand="full" style="min-width:75%" routerLink="../prequalify-finalize">I Agree</ion-button>
   </ion-row>
   <ion-row class="ion-justify-content-center" style="padding-top:1em;">
     <ion-label><a>I Disgree</a></ion-label>

@@ -1,6 +1,6 @@
 <nav></nav>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="false">
   <ion-row>
     <ion-col>
       <ion-card>
@@ -10,13 +10,10 @@
               <ion-text class="body-body">Complete thie form to find out how much you pre-qualify for!</ion-text>
             </ion-row>
             <ion-row style="margin-top:1em;">
-              <ion-label><ion-icon name="alert-circle-outline"></ion-icon>Pay Cycle</ion-label>
+              <ion-label>Pay Cycle</ion-label>
             </ion-row>
             <ion-row>
-              <p>A wizard is being developed for the paycycle. the user will pick thier next 4 paydates and it will spit out a paycycle</p>
-            </ion-row>
-            <ion-row>
-              <ion-item style="width:100%">
+              <ion-item style="width: 100%; border-bottom: 1px solid black; ">
                 <ion-datetime value="" placeholder="Next Pay Date" ></ion-datetime>
               </ion-item>
               </ion-row>
@@ -24,9 +21,9 @@
               <ion-label><ion-icon name="alert-circle-outline"></ion-icon>Net Monthly Income</ion-label>
             </ion-row>
             <ion-row>
-              <ion-input typeof="transaction-amount" placeholder="Enter Take Home Pay"></ion-input>
+              <ion-input style=" border-bottom: 1px solid black;" typeof="transaction-amount" placeholder="Enter Take Home Pay"></ion-input>
             </ion-row>
-            <ion-row>
+            <ion-row style="margin-top:1em;">
               <select class="incomeSelect" [(ngModel)]="employmentType">
                 <option style="opacity:.5">Income Type</option>
                 <option value="employment">Employment</option>
@@ -35,10 +32,10 @@
             <div *ngIf="employmentType === 'employment'">
               <ion-row>
                 <ion-col>
-                  <ion-input typeof="organization" placeholder="Company Name"></ion-input>
+                  <ion-input style="width: 100%; border-bottom: 1px solid black; " typeof="organization" placeholder="Company Name"></ion-input>
                 </ion-col>
                 <ion-col>
-                  <ion-input typeof="organization-title" placeholder="Job Title"></ion-input>
+                  <ion-input style="width: 100%; border-bottom: 1px solid black; " typeof="organization-title" placeholder="Job Title"></ion-input>
                 </ion-col>
               </ion-row>
               <ion-row>
@@ -56,9 +53,9 @@
                 </ion-col>
               </ion-row>
               <ion-row>
-                <ion-col size="6">
+                <ion-col>
                   <ion-item style="width:100%">
-                    <ion-datetime value="" placeholder="Date of hire"></ion-datetime>
+                    <ion-datetime style="width: 100%; border-bottom: 1px solid black; " value="" placeholder="Date of hire"></ion-datetime>
                   </ion-item>
                 </ion-col>
               </ion-row>
@@ -71,39 +68,8 @@
       </ion-card>
     </ion-col>
   </ion-row>
-  <ion-card>
-    <ion-card>
-      <ion-row>
-        <ion-col>
-          <ion-row>
-            <ion-text class="body-body">
-              Please enter your bank routing number (9-digit number) and account information. Your data is protected with bank-level security.
-            </ion-text>
-          </ion-row>
-          <ion-row style="margin-top:1em;">
-            <ion-input placeholder="Enter Routing Number"></ion-input>
-          </ion-row>
-          <ion-row>
-            <ion-input placeholder="Enter Bank Name"></ion-input>
-          </ion-row>
-          <ion-row>
-            <select class="incomeSelect">
-              <option style="opacity:.5">Choose Account Type</option>
-              <option style="opacity:.5">Checking</option>
-              <option style="opacity:.5">Savings</option>
-            </select>
-          </ion-row>
-          <ion-row>
-            <ion-input placeholder="Enter Account Number"></ion-input>
-          </ion-row>
-        </ion-col>
-      </ion-row>
-    </ion-card>
-    <ion-row>
-    </ion-row>
-  </ion-card>
   <ion-row class="ion-justify-content-center">
-    <ion-button color="tertiary" routerLink="../prequalify-terms">Pre-Qualify Me!</ion-button>
+    <ion-button expand="full" style="min-width:75%" color="tertiary" routerLink="../prequalify-terms">Pre-Qualify Me!</ion-button>
   </ion-row>
   <ion-row class="ion-justify-content-center" style="padding-top:1em">
     <p>This will not affect your credit score!</p>

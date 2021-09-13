@@ -1,9 +1,13 @@
 <nav></nav>
 
-<ion-content [fullscreen]="true">
-  <ion-text color="primary">
-    <h1>Account</h1>
-  </ion-text>
+<ion-content [fullscreen]="false">
+  <ion-row>
+    <ion-col>
+      <ion-text color="primary">
+        <h1 class="header">Account</h1>
+      </ion-text>
+    </ion-col>
+  </ion-row>
   <ion-card>
     <ion-row>
       <ion-col>
@@ -12,36 +16,43 @@
         </ion-row>
         <ion-row>
           <ion-col>
-            <ion-button expand="full" color="light" routerLink="./profile">
-              <ion-text>My Profile</ion-text>
+            <ion-button expand="full" color="medium" routerLink="./profile">
+              <ion-text class="ion-text-left">My Profile</ion-text><img src="../assets/ArrowRight.svg" />
             </ion-button>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
-            <ion-button expand="full" color="light" routerLink="./purchases">
-              <ion-text>My Purchases</ion-text>
+            <ion-button expand="full" color="medium" routerLink="./purchases">
+              <ion-text class="ion-text-left">My Purchases</ion-text><img src="../assets/ArrowRight.svg" />
             </ion-button>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
-            <ion-button expand="full" color="light" routerLink="./refer">
-              <ion-text>Refer A Friend</ion-text>
+            <ion-button expand="full" color="medium" routerLink="./refer">
+              <ion-text class="ion-text-left">Refer A Friend</ion-text><img src="../assets/ArrowRight.svg" />
             </ion-button>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
-            <ion-button expand="full" color="light" routerLink="./coupons">
-              <ion-text>Coupons</ion-text>
+            <ion-button expand="full" color="medium" routerLink="./coupons">
+              <ion-text class="ion-text-left">Coupons</ion-text><img src="../assets/ArrowRight.svg" />
             </ion-button>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
-            <ion-button expand="full" color="light" routerLink="./help">
-              <ion-text>Help</ion-text>
+            <ion-button expand="full" color="medium" routerLink="./help">
+              <ion-text class="ion-text-left">Help</ion-text><img src="../assets/ArrowRight.svg" />
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button expand="full" color="medium">
+              <ion-text>Log Out</ion-text>
             </ion-button>
           </ion-col>
         </ion-row>

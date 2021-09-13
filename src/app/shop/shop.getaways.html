@@ -1,6 +1,6 @@
 <nav></nav>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="false">
   <div id="container" style="align-content:center">
     <ion-grid>
       <ion-row>
@@ -9,7 +9,7 @@
           <h2 class="header2"><strong>Premium Resorts</strong></h2>
           <ion-slides pager="true" [options]="slideOpts">
             <ion-slide>
-              <iframe [src]="trustedVideoUrl" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe [src]="trustedVideoUrl" autoplay="true" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen></iframe>
             </ion-slide>
             <ion-slide>
               <img src="../assets/PremiumResorts.svg" />
@@ -71,10 +71,12 @@
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-button color="tertiary" expand="full" routerLink="../payment-agreement">Buy Now</ion-button>
+          <ion-button color="light" expand="full" routerLink="../getaways-odenza">Browse Vacation Options</ion-button>
         </ion-col>
+      </ion-row>
+      <ion-row>
         <ion-col>
-          <ion-button color="tertiary" expand="full" routerLink="../payment-agreement">Add to Cart</ion-button>
+          <ion-button color="tertiary" expand="full" routerLink="../shop">Add to Cart</ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>

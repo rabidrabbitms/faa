@@ -12,7 +12,17 @@ import { Location } from '@angular/common';
 export class accountBuyingPowerForm implements OnInit {
   constructor(public alertController: AlertController, private location: Location) { }
 
+  income: boolean = false;
+  bank: boolean = false;
+
   ngOnInit(){
   }
-
+  open(module: string) {
+    if (module === "income"){
+      this.income = !this.income;
+    }
+    if (module === "bank") {
+      this.bank = !this.bank;
+    }
+  }
 }
