@@ -7,8 +7,8 @@
       <ion-grid *ngFor="let chat of chats; let i=index" ng-style="chat.Hidden === true ? height: '0px' : ''" [ngClass]="chat.Hidden === true ? 'ion-hide' : ''" style="z-index:99;" (click)="selectChat(chat)" id="chat{{i}}">
         <ion-row [ngClass]="chat.Selected ? 'no-padding bubble' : 'no-padding bubble transparent'">
           <ion-col class="no-padding">
-            <ion-text *ngIf="!chat.Selected" [hidden]="chat.Hidden" ng-style="chat.Hidden === true ? height: '0px' : ''">{{chat.ShortText}}</ion-text>
-            <ion-text *ngIf="chat.Selected" [hidden]="chat.Hidden" ng-style="chat.Hidden === true ? height: '0px' : ''">{{chat.LongText}}</ion-text>
+            <ion-text style="z-index:999" *ngIf="!chat.Selected" [hidden]="chat.Hidden" ng-style="chat.Hidden === true ? height: '0px' : ''">{{chat.ShortText}}</ion-text>
+            <ion-text style="z-index:999" *ngIf="chat.Selected" [hidden]="chat.Hidden" ng-style="chat.Hidden === true ? height: '0px' : ''">{{chat.LongText}}</ion-text>
           </ion-col>
         </ion-row>
         <ion-row *ngIf="chat.Selected" class="no-padding" style="margin-top: -2px;">
