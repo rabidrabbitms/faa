@@ -37,6 +37,7 @@
     "ngx-countdown-timer": "^0.2.0",
     "npm": "^7.21.0",
     "rxjs": "~6.6.0",
+    "signature_pad": "^3.0.0-beta.4",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
   },
