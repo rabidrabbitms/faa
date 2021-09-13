@@ -34,6 +34,7 @@
   border-right: 0;
   margin-left: -11px;
   margin-bottom: -22px;
+  z-index: 999;
 }
 .chat-finished {
   transform: scale(0);
@@ -72,11 +73,12 @@
   opacity: 1;
 }
 
-.tail{
-    width: 20px;
-    height: 20px;
-    margin-top: -10px;
-    margin-left: 20%;
+.tail {
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: 20%;
+  z-index: 999;
 }
 .transparent{
     opacity: .5;
