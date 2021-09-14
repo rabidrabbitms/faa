@@ -10,53 +10,56 @@ import { Animation, AnimationController } from '@ionic/angular';
 
 export class LoginPage implements OnInit {
 
-  constructor(private animationCtrl: AnimationController) {
-  }
+  constructor(private animationCtrl: AnimationController) {}
   chats: Array<Chat> = [];
+  loading: boolean = false;
   ngOnInit() {
-
+    this.loading = true;
     this.chats = [
-      new Chat(1, "Hi, I'm Looky! I'm always looking out for great values for you", "Hi, I'm Looky!  ...", false, true),
+      new Chat(1, "Hi, I'm Looky! I'm always looking out for great values for you", "Hi, I'm Looky!  ...", true, false),
       new Chat(2, "You can select from a wide range of vacation options made affordable through easy payments with no interest.", "You can select from  ...", false, true),
       new Chat(3, "Plus, every quarter we offer limited-availability special buys of cool products available with easy payments with no interest.", "Plus every quarter we offer  ...", false, true),
       new Chat(4, "Sign up today - there is no obligation to buy!", "Sign up today  ...", false,true)
     ]
     //this.ArrayPlusDelay(this.chats, function (obj) { obj.Hidden = false; obj.Selected = true; }, 5000);
-
+    console.log(this.chats);
     let counter = 1;
+    let elemID = 4
     const timer = setInterval(() => {
       if (counter > (this.chats.length-1))
         clearInterval(timer);
       if (counter > 1) {
-        const previousElem = document.getElementById("chat" + (counter - 2).toString());
+        const previousElem = document.getElementById("chat" + (elemID).toString());
         this.chats[counter - 2].Selected = false;
         const moveChat =
           this.animationCtrl.create()
             .addElement(previousElem)
             .duration(750)
             .easing('ease-in')
-            .fromTo('transform', 'translateY(150px)', 'translateY(0px)');
+            .fromTo('transform', 'translateY(-75px)', 'translateY(-245px)');
         moveChat.play();
       }
 
-      const chat = this.chats[counter - 1];
+      const chat = this.chats[counter -1];
     
       chat.Hidden = false;
       chat.Selected = true;
 
-      const elem = document.getElementById("chat" + (counter - 1).toString());
+      const elem = document.getElementById("chat" + (elemID).toString());
 
       const animation = this.animationCtrl.create()
         .addElement(elem)
         .duration(4500)
-        .beforeStyles({top:'75px'})
+        .beforeStyles({top:'225px'})
         .easing('ease-in')
         .fromTo('transform', '150px','150px');
       animation.play();
 
       counter++;
+      elemID--;
     }, 5000);
-    
+
+    this.loading = false;
   }
 
 

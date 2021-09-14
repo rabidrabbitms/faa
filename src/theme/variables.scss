@@ -180,12 +180,12 @@ $app-theme: mat.define-light-theme((
     --ion-color-dark-shade: #d7d8da;
     --ion-color-dark-tint: #f5f6f9;
 
-    --ion-color-medium: #989aa2;
-    --ion-color-medium-rgb: 152,154,162;
-    --ion-color-medium-contrast: #000000;
-    --ion-color-medium-contrast-rgb: 0,0,0;
-    --ion-color-medium-shade: #86888f;
-    --ion-color-medium-tint: #a2a4ab;
+   --ion-color-medium: #ffffff;
+  --ion-color-medium-rgb: 255, 255, 255;
+  --ion-color-medium-contrast: #484751;
+  --ion-color-medium-contrast-rgb: 72, 71, 81;
+  --ion-color-medium-shade: #d9d9d9;
+  --ion-color-medium-tint: #d9d9d9;
 
     --ion-color-light: #222428;
     --ion-color-light-rgb: 34,36,40;

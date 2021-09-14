@@ -34,7 +34,6 @@
   border-right: 0;
   margin-left: -11px;
   margin-bottom: -22px;
-  z-index: 999;
 }
 .chat-finished {
   transform: scale(0);
@@ -61,7 +60,7 @@
   border-radius: .4em;
   margin-bottom: 2em;
   opacity:.65;
-  z-index: 999;
+  z-index: 998;
 }
 .bubble {
   position: relative;
@@ -73,12 +72,12 @@
   opacity: 1;
 }
 
-.tail {
-  width: 20px;
-  height: 20px;
-  margin-top: -10px;
-  margin-left: 20%;
-  z-index: 999;
+.tail{
+    width: 20px;
+    height: 21px;
+    margin-top: -13px;
+    margin-left: 20%;
+    z-index:999;
 }
 .transparent{
     opacity: .5;

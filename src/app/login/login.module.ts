@@ -9,13 +9,15 @@ import { LoginSignin } from './login.signin';
 import { LoginLoading } from './login.loading';
 import { LoginVerify } from './login.verify';
 import { LoginBackground } from './login.background';
+import { UtilitiesModule } from '../utilities/utilities.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    LoginPageRoutingModule
+    LoginPageRoutingModule,
+    UtilitiesModule
   ],
   declarations: [LoginBackground, LoginPage, LoginRegister, LoginSignin, LoginLoading, LoginVerify]
 })

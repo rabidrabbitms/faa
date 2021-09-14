@@ -16,9 +16,17 @@ export class shopPage implements OnInit {
   ) { }
 
   ngOnInit() {
-
+    //this.showAlert2();
   }
 
 
-
+  async showAlert2() {
+    const alert = await this.alertController.create({
+      header: 'Congratulations!',
+      subHeader: 'First Avenue VIP!',
+      message: `Where do you want to get started?<br /><ul><li>Prequalify for Buying power</li><li>Take a look at our vacations, cruises or special offers just for you.</li></ul>`,
+      buttons: ['Browse Around', 'Prequalify']
+    });
+    await alert.present();
+  }
 }

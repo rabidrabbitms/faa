@@ -29,6 +29,7 @@ import { AgreementReviewPage } from './agreement/agreement.review';
 import { AgreementFinalizingPage } from './agreement/agreement.finalizing';
 import { CartCheckoutPage } from './cart/cart.checkout';
 import { shopGetawaysOdenzaPage } from './shop.getaways.odenza';
+import { Banner } from './nav/banner';
 
 
 
@@ -40,7 +41,7 @@ import { shopGetawaysOdenzaPage } from './shop.getaways.odenza';
     FormsModule,
     ExploreContainerComponentModule,
     shopPageRoutingModule,
-    MatExpansionModule,
+    MatExpansionModule
   ],
   declarations: [
     shopPage,
@@ -61,6 +62,7 @@ import { shopGetawaysOdenzaPage } from './shop.getaways.odenza';
     shopPaymentAgreementPage,
     shopSpecialOffersLandingPage,
     NavPage,
+    Banner,
     CartPage,
     CartCheckoutPage,
     AgreementLandingPage,
@@ -88,6 +90,7 @@ import { shopGetawaysOdenzaPage } from './shop.getaways.odenza';
     shopPaymentAgreementPage,
     shopSpecialOffersLandingPage,
     NavPage,
+    Banner,
     CartPage,
     CartCheckoutPage,
     AgreementLandingPage,
