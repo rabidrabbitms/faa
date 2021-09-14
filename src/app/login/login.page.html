@@ -1,14 +1,13 @@
 <div *ngIf="loading">Some type of cool loading animation.  Maybe the blue line that we have in SOAR.</div>
 <div *ngIf="!loading">
-  <ion-grid style="position: absolute; top: 0; left: 0; min-width:100%; min-height:800px;">
-    <app-login-background class="background"></app-login-background>
-  </ion-grid>
+
+  <app-login-background class="background"></app-login-background>
   <ion-grid style="position: absolute; top: 0; left: 0; z-index: 9999;">
 
 
     <ion-row style="position: absolute; top: 225px; left: 0; z-index: 9999;">
       <ion-col>
-        <ion-grid *ngFor="let chat of chats | sort: [{key:'Order', direction:'desc'}]; let i=index"  [ngClass]="chat.Hidden === true ? 'ion-hide' : ''" style="z-index:9999;" (click)="selectChat(chat)" id="chat{{i}}">
+        <ion-grid *ngFor="let chat of chats | sort: [{key:'Order', direction:'desc'}]; let i=index" [ngClass]="chat.Hidden === true ? 'ion-hide' : ''" style="z-index:9999;" (click)="selectChat(chat)" id="chat{{i}}">
           <ion-row *ngIf="!chat.hidden" [ngClass]="chat.Selected ? 'no-padding bubble' : 'no-padding bubble transparent'" style="z-index:9999">
             <ion-col class="no-padding">
               <ion-text style="z-index:9999" *ngIf="!chat.Selected" [hidden]="chat.Hidden" ng-style="chat.Hidden === true ? height: '0px' : ''">{{chat.ShortText}}</ion-text>
@@ -33,7 +32,7 @@
           <img src="../assets/FirstAvenulogin.svg" style="padding-top: 1em; z-index: 999" />
         </ion-row>
         <ion-row class="ion-justify-content-center">
-          <ion-button color="tertiary" expand="block" style="padding-top: 1em; z-index: 999" routerLink="../app-login-register">Get Started!</ion-button>
+          <ion-button color="tertiary" expand="block" style="padding-top: 1em; z-index: 999" href="app-login-register">Get Started!</ion-button>
         </ion-row>
         <ion-row class="ion-justify-content-center" style="padding-top: 1em; z-index: 999">
           <ion-text style="z-index:999;"> Already a member? <a href="signin">Login here</a>.</ion-text>
