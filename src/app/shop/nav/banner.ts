@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { Animation, AnimationController, AlertController  } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'banner',
@@ -9,14 +10,14 @@ import { Animation, AnimationController, AlertController  } from '@ionic/angular
 })
 export class Banner implements OnInit  {
 
-  constructor(private location: Location, private animationCtrl: AnimationController) {}
+  constructor(private location: Location, private animationCtrl: AnimationController, private router : Router) {}
 
   banners = [
-    {Name:'prequalify',     header: 'Pre-Qualify Me!',         body: `I want to know what I'm eligible for!`,   img: '../assets/Banner-Passport.svg',   animationType: 'rotate' },
-    {Name:'purchaseReady',  header: 'Purchase Is Ready!',      body: `Ready to be picked up.`,                  img: '../assets/Banner-Car.svg',        animationType: 'rightToLeft' },
-    {Name:'vacationReady',  header: 'Your Vacation Awaits',    body: `Redeem your vacation now.`,               img: '../assets/Banner-Ticket.svg',    animationType: 'rotate' },
-    {Name:'processing',     header: 'Application Processing',  body: `We'll notify you when we are done.`,      img: '../assets/Banner-Looky.svg', animationType: 'rightToLeft' },
-    {Name:'refer-a-friend', header: 'Earn Extra Cash!',        body: `Invite your friends to join First Avenu`, img: '../assets/Banner-RAF.svg',        animationType: 'rightToLeft' },
+    {Name:'prequalify',     header: 'Pre-Qualify Me!',         body: `I want to know what I'm eligible for!`,   img: '../assets/Banner-Passport.svg',   animationType: 'rotate', link:'/tabs/tabs/shop/prequalify' },
+    {Name:'purchaseReady',  header: 'Purchase Is Ready!',      body: `Ready to be picked up.`,                  img: '../assets/Banner-Car.svg',        animationType: 'rightToLeft', link:'/tabs/tabs/account/purchases' },
+    { Name: 'vacationReady', header: 'Your Vacation Awaits', body: `Redeem your vacation now.`, img: '../assets/Banner-Ticket.svg', animationType: 'rotate', link:'/tabs/tabs/account/purchases'},
+    {Name:'processing',     header: 'Application Processing',  body: `We'll notify you when we are done.`,      img: '../assets/Banner-Looky.svg', animationType: 'rightToLeft', link:'' },
+    {Name:'refer-a-friend', header: 'Earn Extra Cash!',        body: `Invite your friends to join First Avenu`, img: '../assets/Banner-RAF.svg',        animationType: 'rightToLeft', link:'/tabs/tabs/account/refer' },
   ];
   banner;
 
@@ -26,7 +27,9 @@ export class Banner implements OnInit  {
     this.createAnimation('.image', '', '75', '0', 8000);
     console.log(this.banner);
   }
-
+  nav() {
+    this.router.navigate([this.banner.link])
+  }
   createAnimation(element: string, movementStyle: string, movementStart: string, movementEnd: string, duration: number) {
     movementStyle = this.banner.animationType;
     if (movementStyle == 'rightToLeft') {
