@@ -1,0 +1,95 @@
+<nav></nav>
+<ion-content [fullscreen]="false">
+  <ion-row>
+    <ion-col>
+      <h2 class="header2">
+        Discover Your Purchasing Power
+      </h2>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-text class="body-body">
+        [First name],
+        Prequalifying for your purchasing power does not affect your credit score.  We use bank level security to keep your information safe and secure.
+      </ion-text>
+    </ion-col>
+  </ion-row>
+  <ion-card style="padding-top:0em">
+    <ion-row>
+      <ion-col>
+        <ion-input typeof="street-address" style="border-bottom:1px solid lightgrey;" placeholder="Address">
+        </ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input typeof="address-level2" style="border-bottom:1px solid lightgrey;" placeholder="Apt\Ste.">
+        </ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <select class="stateSelect">
+          <option style="opacity:.5">State</option>
+          <option *ngFor="let state of states">{{state}}</option>
+        </select>
+      </ion-col>
+      <ion-col>
+        <ion-input typeof="postal-code" style="border-bottom:1px solid lightgrey;" placeholder="Zip Code">
+        </ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input typeof="tel-area-code" style="border-bottom:1px solid lightgrey;" placeholder="Mobile Phone">
+        </ion-input>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <ion-card>
+    <ion-row>
+      <ion-col>
+        <ion-row>
+          <ion-text class="body-body">
+            Please enter your bank routing number (9-digit number) and account information. Your data is protected with bank-level security.
+          </ion-text>
+        </ion-row>
+        <ion-row style="margin-top:1em;">
+          <ion-input placeholder="Enter Routing Number"></ion-input>
+        </ion-row>
+        <ion-row>
+          <ion-input placeholder="Enter Bank Name"></ion-input>
+        </ion-row>
+        <ion-row>
+          <select class="incomeSelect">
+            <option style="opacity:.5">Choose Account Type</option>
+            <option style="opacity:.5">Checking</option>
+            <option style="opacity:.5">Savings</option>
+          </select>
+        </ion-row>
+        <ion-row>
+          <ion-input placeholder="Enter Account Number"></ion-input>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <ion-card>
+    <ion-row>
+      <ion-input style="border-bottom:1px solid lightgrey;" placeholder="SSN"><ion-icon name="alert-circle-outline" (click)="infoShow == true"></ion-icon></ion-input>
+    </ion-row>
+    <ion-row>
+      <ion-item>
+        <ion-datetime value="" placeholder="Birthdate"></ion-datetime>
+      </ion-item>
+    </ion-row>
+  </ion-card>
+  <ion-row class="ion-justify-content-center">
+    <ion-col style="padding-left:3em">
+      <ion-checkbox></ion-checkbox> <ion-label> I agree to the terms specified <a (click)="open()">here</a></ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row class="ion-justify-content-center">
+    <ion-button color="tertiary" expand="full" style="75%" routerLink="../prequalify-income">Let's Get Started!</ion-button>
+  </ion-row>
+</ion-content>

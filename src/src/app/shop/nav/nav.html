@@ -1,0 +1,32 @@
+<ion-header style="margin-top:20px;">
+  <ion-toolbar>
+    <ion-grid class="ion-no-padding">
+      <ion-row>
+        <ion-col size="3">
+          <img style="padding:.5em" src="./assets/Back.svg" (click)="back()"/>
+        </ion-col>
+        <ion-col size="1.5">
+          <img src="./assets/TinyLooky.svg" />
+        </ion-col>
+        <ion-col size="1.5">
+          <ion-row style="padding:0;">
+            <ion-text class="nav">
+              Buying
+            </ion-text>
+          </ion-row>
+          <ion-row style="margin-top:-8px;">
+            <ion-text class="nav">
+              Power
+            </ion-text>
+          </ion-row>
+        </ion-col>
+        <ion-col size="4">
+          <h2>$XXXX</h2>
+        </ion-col>
+        <ion-col>
+          <img style="padding: .5em" src="./assets/icon/Cart.svg" routerLink="/tabs/tabs/shop/cart"/>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>

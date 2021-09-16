@@ -1,0 +1,26 @@
+.incomeSelect {
+  /* Applies to the value and placeholder color */
+  color: #000000;
+  /* Set a different placeholder color */
+  --placeholder-color: #971e49;
+  /* Set full opacity on the placeholder */
+  --placeholder-opacity: 1;
+  width: 100%;
+  justify-content: center;
+  background-color:white;
+  height:100%;
+}
+.incomeSelect::part(icon) {
+  color: #971e49;
+  opacity: 1;
+}
+ion-input {
+
+}
+.h1 {
+  font-family: Barlow Condensed;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 130%;
+}

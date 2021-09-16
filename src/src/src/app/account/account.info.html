@@ -1,0 +1,48 @@
+<nav></nav>
+<ion-content [fullscreen]="false">
+  <ion-row>
+    <ion-col>
+      <ion-text color="primary">
+        <h1 class="header">My Info</h1>
+      </ion-text>
+    </ion-col>
+  </ion-row>
+  <ion-card>
+    <ion-row>
+      <ion-col>
+        <ion-row class="ion-justify-content-center">
+          <img src="../assets/Lookylooky.svg" />
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button expand="full" color="medium" routerLink="../info-details">
+              <ion-text class="ion-text-left">Details</ion-text><img src="../assets/ArrowRight.svg" />
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button expand="full" color="medium" routerLink="../info-income">
+              <ion-text class="ion-text-left">Income</ion-text><img src="../assets/ArrowRight.svg" />
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button expand="full" color="medium" routerLink="../info-bank">
+              <ion-text class="ion-text-left">Bank</ion-text><img src="../assets/ArrowRight.svg" />
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button expand="full" color="medium" routerLink="../info-debit">
+              <ion-text class="ion-text-left">Debit</ion-text><img src="../assets/ArrowRight.svg" />
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <app-explore-container name="account page"></app-explore-container>
+</ion-content>

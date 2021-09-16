@@ -1,0 +1,71 @@
+<nav></nav>
+
+<ion-content [fullscreen]="false">
+  <ion-row>
+    <ion-col>
+      <h1 class="header">
+        Your Agreement
+      </h1>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-card>
+      <ion-row>
+        <ion-col>
+          <ion-row>
+            <h2 class="header2">Credit Disclosure Agreement</h2>
+          </ion-row>
+          <ion-row>
+            <ion-text class="body-header-agreement"><a (click)="open('cda')">Click here to view the Credit Disclosure Agreement</a></ion-text>
+          </ion-row>
+          <ion-row style="margin-top:4px;">
+            <ion-text class="agreement-header">
+              By clicking on the "I Agree" button, you agree to the following:
+            </ion-text>
+          </ion-row>
+          <ion-row>
+            <ul>
+              <li style="margin:2px;">
+                <ion-text class="body-body">
+                  I agree to the First Avenu Consumer Verification Acknowledgment and First Avenu <a (click)="open('pp')">Privacy Policy</a>.
+                </ion-text>
+              </li>
+              <li style="margin-bottom:2px;">
+                <ion-text class="body-body">
+                  I consent to receive calls (including SMS text messages) from First Avenu regarding my account as specified <a (click)="open('sms')">here</a>.
+                </ion-text>
+              </li>
+              <li>
+                <ion-text class="body-body">
+                  I expressly authorize First Avenu and its affiliates to share among them any transaction history related to my financial products or services received through First Avenu or serviced by First Avenu for the purpose of evaluating me for credit.
+                </ion-text>
+              </li>
+            </ul>
+          </ion-row>
+          <ion-row class="ion-justify-content-center">
+            <ion-col size="1">
+              <ion-checkbox></ion-checkbox>
+            </ion-col>
+            <ion-col>
+              <ion-text class="agreement-check">All information I have provided is correct and accurate.</ion-text>
+            </ion-col>
+          </ion-row>
+          <ion-row class="ion-justify-content-center">
+            <ion-col size="1">
+              <ion-checkbox></ion-checkbox>
+            </ion-col>
+            <ion-col>
+              <ion-text class="agreement-check">I consent to the electronic communications agreement specified <a (click)="open('eca')">here</a>.</ion-text>
+            </ion-col>
+          </ion-row>
+          <ion-row class="ion-justify-content-center" style="margin-top:1em;">
+            <ion-button color="tertiary" expand="full" style="min-width:75%; max-width:75%" routerLink="../agreement-signature">I Agree</ion-button>
+          </ion-row>
+          <ion-row class="ion-justify-content-center" style="margin-top:.5em;" >
+            <ion-button color="light" expand="full"  style="min-width:75%; max-width:75%" routerLink="../cart">I Disagree</ion-button>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-row>
+</ion-content>

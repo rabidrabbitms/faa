@@ -1,0 +1,48 @@
+<ion-content>
+  <ion-grid style="position: absolute; top: 0; left: 0; min-width:100%; min-height:800px;">
+    <app-login-background class="background"></app-login-background>
+  </ion-grid>
+  <ion-grid class="foreground" style="position: absolute; top: 0; left: 0;">
+    <ion-row>
+      <ion-col>
+        <ion-row class="ion-justify-content-center" style="padding-top:9em">
+          <img class="chat1" src="../assets/LookyTalkSignIn.svg" style="z-index:9999" />
+        </ion-row>
+        <ion-row class="ion-justify-content-center" style="padding:0em">
+          <img class="looky" src="../assets/Lookylooky.svg" style="z-index:9999" />
+          <img class="marquee" src="../assets/FirstAvenulogin.svg" style="padding-top: 5px; z-index: 9999" />
+        </ion-row>
+        <ion-row style="padding:0em">
+          <ion-col style="padding:0em">
+            <ion-card style="z-index:9999">
+              <ion-row>
+                <ion-col>
+                  <ion-input inputmode="username" typeof="email" max="100" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})" style="border-bottom: 1px solid lightgrey; z-index: 9999" placeholder="Email">
+                  </ion-input>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-input typeof="current-password" min="8" max="100" style="border-bottom: 1px solid lightgrey; z-index: 9999" placeholder="Password">
+                  </ion-input>
+                </ion-col>
+              </ion-row>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-justify-content-center" style="padding-top: .25em; z-index:9999">
+          <ion-text style=" z-index:9999">Forgot your sign in?</ion-text>
+        </ion-row>
+        <ion-row class="ion-justify-content-center" style="padding-top: .25em; z-index: 9999">
+          <ion-button color="tertiary" expand="full" style="padding-top: 0em; z-index: 9999" routerLink="../tabs/tabs/shop">Log In</ion-button>
+        </ion-row>
+        <ion-row class="ion-justify-content-center" style="padding-top: .25em; z-index: 9999">
+          <ion-checkbox style="z-index:9999"></ion-checkbox> <ion-label style="padding-left:.5em; font-size:small; z-index:9999">Remember Me!</ion-label>
+        </ion-row>
+        <ion-row class="ion-justify-content-center" style="padding-top: .25em; z-index: 9999">
+          <ion-text style="z-index:9999">Don't Have an account? <a href="app-login-register">Register here</a></ion-text>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+</ion-grid>
+</ion-content>

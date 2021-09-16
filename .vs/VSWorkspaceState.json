@@ -1,7 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\login",
+    "\\src\\app\\shop\\agreement",
+    "\\src\\app\\shop\\nav",
+    "\\src\\app\\shop\\prequalification"
   ],
-  "SelectedNode": "\\F:\\source\\repos\\FA-Apps\\first-avenu",
+  "SelectedNode": "\\src\\app\\login\\login.verify.html",
   "PreviewInSolutionExplorer": false
 }

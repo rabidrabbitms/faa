@@ -1,0 +1,88 @@
+<nav></nav>
+
+<ion-content [fullscreen]="false">
+  <ion-row>
+    <ion-col>
+      <ion-text color="primary">
+        <h1 class="header">Income</h1>
+      </ion-text>
+    </ion-col>
+  </ion-row>
+  <ion-grid>
+    <ion-card>
+      <ion-row>
+        <ion-text class="body-header">Account Income</ion-text>
+      </ion-row>
+      <ion-row>
+        <ion-text class="body-header">Primary</ion-text>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-row>
+            <ion-text class="body-body">Company:</ion-text>
+          </ion-row>
+          <ion-row>
+            <ion-text>[Company]</ion-text>
+          </ion-row>
+        </ion-col>
+        <ion-col>
+          <ion-row>
+            <ion-text class="body-body">Job Title:</ion-text>
+          </ion-row>
+          <ion-row>
+            <ion-text>[Job title]</ion-text>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-row>
+            <ion-text class="body-body">Company:</ion-text>
+          </ion-row>
+          <ion-row>
+            <ion-text>[Company]</ion-text>
+          </ion-row>
+        </ion-col>
+        <ion-col>
+          <ion-row>
+            <ion-text class="body-body">Job Title:</ion-text>
+          </ion-row>
+          <ion-row>
+            <ion-text>[Job title]</ion-text>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+      <ion-row style="margin-top:1em;">
+        <ion-text class="body-header">Your Income(s)</ion-text>
+      </ion-row>
+      <ion-row style="border:.5px solid black; margin-top:1em;">
+        <ion-col>
+          <ion-text class="body-body">[Name of Income]</ion-text>
+        </ion-col>
+        <ion-col>
+          <ion-text class="body-body">[$ Amount]</ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row style="margin-top:1em;">
+        <ion-col>
+          <ion-text class="body-body">TOTAL Net Monthly Income:</ion-text>
+        </ion-col>
+        <ion-col>
+          <ion-text class="body-body">[$ Amount]</ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-justify-content-center" style="margin-top:1em;">
+        <ion-button color="tertiary" expand="full">Add An Income</ion-button>
+      </ion-row>
+      <ion-row class="ion-justify-content-center" style="margin-top:2em">
+        <ion-text class="body-header">Upload Supporting Documents</ion-text>
+      </ion-row>
+      <ion-row style="margin-top:1em">
+        <ion-col style="margin:1em;">
+          <input type="file" (change)="loadImageFromDevice($event)" class="upload"
+                 accept="image/png, image/jpeg">
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-grid>
+</ion-content>

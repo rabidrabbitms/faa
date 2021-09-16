@@ -1,0 +1,126 @@
+<nav></nav>
+
+<ion-content [fullscreen]="false">
+  <div id="container" style="align-content:center">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h1 class="header">One Week Getaway</h1>
+          <h2 class="header2"><strong>Premium Resorts</strong></h2>
+          <ion-slides pager="true" [options]="slideOpts">
+            <ion-slide>
+              <iframe [src]="trustedVideoUrl" autoplay="true" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen></iframe>
+            </ion-slide>
+            <ion-slide>
+              <img src="../assets/Vacations-1.jpg" />
+            </ion-slide>
+            <ion-slide>
+              <img src="../assets/Vacations-2.jpg" />
+            </ion-slide>
+            <ion-slide>
+              <img src="../assets/Vacations-3.jpg" />
+            </ion-slide>
+            <ion-slide>
+              <img src="../assets/Vacations-4.jpg" />
+            </ion-slide>
+            <ion-slide>
+              <img src="../assets/Vacations-5.jpg" />
+            </ion-slide>
+            <ion-slide>
+              <img src="../assets/Vacations-6.jpg" />
+            </ion-slide>
+            <ion-slide>
+              <img src="../assets/Vacations-7.jpg" />
+            </ion-slide>
+          </ion-slides>
+        </ion-col>
+      </ion-row>
+      <ion-grid class="ion-no-padding" style="background:#333184; padding-top: 10px; padding-bottom: 0px;">
+        <ion-row class="ion-no-padding" style="height: 20px; font-size: 30px; color: #fff; font-family:'text';">
+          <ion-col size="2" class="ion-no-padding" style="text-align: center;">
+            <ion-text>05</ion-text>
+          </ion-col>
+          <ion-col size="2" class="ion-no-padding" style="text-align: center;">
+            <ion-text>21</ion-text>
+          </ion-col>
+          <ion-col size="2" class="ion-no-padding" style="text-align: center;">
+            <ion-text>09</ion-text>
+          </ion-col>
+          <ion-col size="2" class="ion-no-padding" style="text-align: center;">
+            <ion-text>38</ion-text>
+          </ion-col>
+          <ion-col size="4" class="ion-no-padding" style="text-align: center;">
+            <h2 style="font-size:11px; color:#ffffff !important; font-family:'text' !important; margin: 0; padding: 0;">Limited Availability</h2>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-no-padding">
+          <ion-col size="2" class="ion-no-padding" style="text-align: center;">
+            <ion-text style="font-size:8px; color:#ffffff !important; font-family:'text' !important;">Days</ion-text>
+          </ion-col>
+          <ion-col size="2" class="ion-no-padding" style="text-align: center;">
+            <ion-text style="font-size:8px; color:#ffffff !important; font-family:'text' !important;">Hrs</ion-text>
+          </ion-col>
+          <ion-col size="2" class="ion-no-padding" style="text-align: center;">
+            <ion-text style="font-size:8px; color:#ffffff !important; font-family:'text' !important;">Mins</ion-text>
+          </ion-col>
+          <ion-col size="2" class="ion-no-padding" style="text-align: center;">
+            <ion-text style="font-size:8px; color:#ffffff !important; font-family:'text' !important;">Secs</ion-text>
+          </ion-col>
+          <ion-col size="4" class="ion-no-padding"></ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-row style="margin-bottom:1em;">
+            <h4 class="header1">Great Vacations with Easy Payments</h4>
+          </ion-row>
+          <ion-row style="margin-bottom:1em;">
+            <ion-text class="body-header">7-nights of resort Accommodations for 2 Adults, and Up to 2 children*</ion-text>
+            <ion-text class="body-body">Departs from any major international airport in the continental United States.</ion-text>
+          </ion-row>
+          <ion-row>
+            <ion-text class="body-header">Up to 3,000 Resorts Worldwide</ion-text>
+            <ion-text class="body-body">Optional upgrades available through our in-house full-service travel agency.</ion-text>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button color="light" expand="full" routerLink="../getaways-odenza">Browse Vacation Options</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button color="tertiary" expand="full" routerLink="../shop">Add to Cart</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                How Does It Work?
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <shophow></shophow>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </ion-row>
+      <ion-row>
+        <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Easy Steps To Take
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <shopsteps></shopsteps>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <app-explore-container name="Vacations Page"></app-explore-container>
+</ion-content>

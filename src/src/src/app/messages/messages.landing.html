@@ -1,0 +1,31 @@
+<nav></nav>
+<ion-content [fullscreen]="false">
+  <ion-row>
+    <ion-col>
+      <ion-slides [options]="{ slidesPerView:1, autoplay: {delay: 10000} }" pager="true">
+        <ion-slide>
+          <img src="../assets/message1.png" />
+        </ion-slide>
+        <ion-slide>
+          <img src="../assets/message2.png" />
+        </ion-slide>
+        <ion-slide>
+          <img src="../assets/message3.png" />
+        </ion-slide>
+      </ion-slides>
+    </ion-col>
+  </ion-row>
+  <ion-row class="ion-justify-content-center" style="padding-top:4em;">
+    <ion-col>
+      <ion-row class="ion-justify-content-center">
+        <a>Turn On Notifications</a>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <ion-row class="ion-justify-content-center">
+    <ion-button color="tertiary" routerLink="../messages">Let's Go</ion-button>
+  </ion-row>
+</ion-content>
+<ion-footer>
+ 
+</ion-footer>
