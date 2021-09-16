@@ -25,6 +25,10 @@ import { accountInfoBank } from './info/account.info.bank';
 import { accountInfoDebit } from './info/account.info.debit';
 import { accountInfoDetails } from './info/account.info.details';
 import { accountInfoIncome } from './info/account.info.income';
+import { accountReferShare } from './account.refer.share';
+import { accountReferReferrals } from './account.refer.myreferrals';
+import { accountReferPayout } from './account.refer.payout';
+import { accountReferStatement } from './account.refer.statement';
 
 @NgModule({
   imports: [
@@ -41,6 +45,10 @@ import { accountInfoIncome } from './info/account.info.income';
     accountProfile,
     accountPurchases,
     accountRefer,
+    accountReferShare,
+    accountReferReferrals,
+    accountReferPayout,
+    accountReferStatement,
     accountCoupons,
     accountHelp,
     accountFAQ,

@@ -1,19 +1,17 @@
 <ion-grid>
-  <ion-row>
-    <ion-col>
+  <ion-row style="background-color: white; z-index: 2; overflow: hidden;">
+    <ion-col style="background-color: white; z-index: 2; overflow: hidden; ">
       <ion-row style="border: solid 2px rgb(72, 71, 81);">
         <ion-col size="9">
-          <ion-row>
-            <ion-text class="body-header">Pre-Qualify Me!</ion-text>
+          <ion-row style="background-color: white; z-index: 2; overflow: hidden;">
+            <ion-text class="body-header">{{banner.header}}</ion-text>
           </ion-row>
           <ion-row style="margin-top:.5em;">
-            <ion-text class="body-body">I want to know what I'm Eligible for!</ion-text>
+            <ion-text class="body-body">{{banner.body}}</ion-text>
           </ion-row>
         </ion-col>
-        <ion-col>
-          <ion-row>
-            <img class="image" src="../assets/Passport.svg" />
-          </ion-row>
+        <ion-col style="background-color: white; z-index: 2; overflow: hidden;">
+            <img class="image" src="{{banner.img}}" />
         </ion-col>
       </ion-row>
     </ion-col>

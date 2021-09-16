@@ -14,9 +14,16 @@ export class shopSpecialOffersLandingPage implements OnInit {
     private animationCtrl: AnimationController,
     public alertController: AlertController
   ) { }
-
+  specialOffersImages = [
+    { img: '../assets/SpecialOffers-1.jpg' },
+    { img: '../assets/SpecialOffers-2.jpg' },
+    { img: '../assets/SpecialOffers-3.jpg' }
+  ];
+  specialOffersImage;
+  specialOffersImage2;
   ngOnInit() {
-
+    this.specialOffersImage = this.specialOffersImages[Math.floor(Math.random() * this.specialOffersImages.length)];
+    this.specialOffersImage2 = this.specialOffersImages[Math.floor(Math.random() * this.specialOffersImages.length)];
   }
 
 

@@ -11,28 +11,30 @@ export class Banner implements OnInit  {
 
   constructor(private location: Location, private animationCtrl: AnimationController) {}
 
-  banners = [{}];
+  banners = [
+    {Name:'prequalify',     header: 'Pre-Qualify Me!',         body: `I want to know what I'm eligible for!`,   img: '../assets/Passport.svg',   animationType: 'rotate' },
+    {Name:'purchaseReady',  header: 'Purchase Is Ready!',      body: `Ready to be picked up.`,                  img: '../assets/car.svg',        animationType: 'rightToLeft' },
+    {Name:'vacationReady',  header: 'Your Vacation Awaits',    body: `Redeem your vacation now.`,               img: '../assets/tickets_mask.svg',    animationType: 'rotate' },
+    {Name:'processing',     header: 'Application Processing',  body: `We'll notify you when we are done.`,      img: '../assets/looky_mask.svg', animationType: 'rightToLeft' },
+    {Name:'refer-a-friend', header: 'Earn Extra Cash!',        body: `Invite your friends to join First Avenu`, img: '../assets/RAF.svg',        animationType: 'rightToLeft' },
+  ];
   banner;
+
+
   ngOnInit() {
-    this.createAnimation('.image', '', '5', '0', 4000)
+    this.banner = this.banners[Math.floor(Math.random() * this.banners.length)];
+    this.createAnimation('.image', '', '50', '0', 8000);
+    console.log(this.banner);
   }
 
   createAnimation(element: string, movementStyle: string, movementStart: string, movementEnd: string, duration: number) {
-    if (movementStyle == 'vertical') {
+    movementStyle = this.banner.animationType;
+    if (movementStyle == 'rightToLeft') {
       const animation: Animation = this.animationCtrl.create()
         .addElement(document.querySelector(element))
         .duration(duration)
-        .iterations(Infinity)
-        .easing('ease-in')
-        .fromTo('transform', 'translateX(' + movementStart + 'px)', 'translateX(' + movementEnd + 'px)');
-      animation.play();
-    }
-    if (movementStyle == 'horizontal') {
-      const animation: Animation = this.animationCtrl.create()
-        .addElement(document.querySelector(element))
-        .duration(duration)
-        .iterations(Infinity)
-        .easing('ease-in')
+        .iterations(1)
+        .easing('ease-out')
         .fromTo('transform', 'translateX(' + movementStart + 'px)', 'translateX(' + movementEnd + 'px)');
       animation.play();
     }

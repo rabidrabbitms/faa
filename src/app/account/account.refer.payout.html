@@ -1,0 +1,87 @@
+<nav></nav>
+<ion-content [fullscreen]="false">
+  <ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-text class="body-body">
+            Referred:<br>
+            {{referrals?.length}} Friends<br>
+            <small><b>(Received Funding)</b></small>
+          </ion-text>
+          <ion-text class="body-body" style="color:orangered !important">
+            Payout:<br>
+            {{redeemableUSD | currency: 'USD'}} Available
+          </ion-text>
+        </ion-col>
+        <ion-col>
+          <img class="img-responsive"
+               src="../assets/ReferAFriend_symbol.png" />
+        </ion-col>
+      </ion-row>
+      <form id="redemption-form" [formGroup]="form" (ngSubmit)="redeem()" *ngIf="redeemableUSD > 4.99">
+        <ion-row class="ion-justify-content-center">
+            <h5 class="font-weight-bold mt-3" style="font-size: 18px">How much would you like to redeem?</h5>
+            <ion-range formControlName="amount"
+                        [options]="sliderOptions"></ion-range>
+            <validation [control]="form.controls.amount"></validation>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <select class="form-control" formControlName="method">
+              <option [selected]="true" [ngValue]="undefined">--Select Method--</option>
+              <option *ngFor="let option of redemptionOptions" [ngValue]="option.method">
+                {{option.method}}<span *ngIf="option.fee > 0">: Fee {{option.fee | currency: 'USD'}}</span>
+              </option>
+            </select>
+            <validation [control]="form.controls.method"></validation>
+            <div *ngIf="loans && form.value.method === 'LoanPayment'"
+                 class="form-group">
+              <label for="loan">Loan</label>
+              <ng-container>
+                <select required
+                        class="form-control"
+                        formControlName="loan">
+                  <option [selected]="true" [ngValue]="undefined">--Select Loan--</option>
+                  <option *ngFor="let loan of loans"
+                          [ngValue]="loan">
+                    <ng-container *ngTemplateOutlet="loanDisplay; context: {loan: loan}"></ng-container>
+                  </option>
+                </select>
+              </ng-container>
+              <validation [control]="form.controls.loan"></validation>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <h3 class="header2">VIP Member Exclusive</h3>
+            <ion-text class="body-body">By Choosing: <b>Apply to Loan</b></ion-text>
+            <ion-text class="body-body"  style="line-height: normal;">
+              Get rewarded even more for applying the reward directly onto an active
+              loan! For payments <b>under $100, an extra 5% is added</b> and for
+              payments <b>$100 & over, an extra 10% is added!</b> This is only available
+              for users with an active loan.
+            </ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <button type="submit" form="redemption-form" [disabled]="processing" class="btn btn-block btn-primary">
+              {{ form.value.method === 'LoanPayment' ? 'Apply ' + (form.value.amount * loanBonus | currency:'USD') + ' to loan (' + ((form.value.amount * loanBonus) - form.value.amount | currency:'USD')  + ' bonus)' : 'Redeem ' + (form.value.amount | currency:'USD') }}
+            </button>
+          </ion-col>
+        </ion-row>
+      </form>
+
+      <ion-row *ngIf="redeemableUSD < 5">
+        <ion-col>
+          <h3 class="header3">VIP Member Exclusive</h3>
+          <ion-text class="body-body" style="line-height: normal;">
+            As soon as you have $5 or more in referral credits, come back to redeem!
+          </ion-text>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>

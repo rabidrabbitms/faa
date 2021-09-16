@@ -1,13 +1,13 @@
 <div *ngIf="loading">Some type of cool loading animation.  Maybe the blue line that we have in SOAR.</div>
 <div *ngIf="!loading">
-
-  <app-login-background class="background"></app-login-background>
+  
+    <app-login-background class="background"></app-login-background>
   <ion-grid style="position: absolute; top: 0; left: 0; z-index: 9999;">
 
 
     <ion-row style="position: absolute; top: 225px; left: 0; z-index: 9999;">
       <ion-col>
-        <ion-grid *ngFor="let chat of chats | sort: [{key:'Order', direction:'desc'}]; let i=index" [ngClass]="chat.Hidden === true ? 'ion-hide' : ''" style="z-index:9999;" (click)="selectChat(chat)" id="chat{{i}}">
+        <ion-grid *ngFor="let chat of chats | sort: [{key:'Order', direction:'desc'}]; let i=index"  [ngClass]="chat.Hidden === true ? 'ion-hide' : ''" style="z-index:9999;" (click)="selectChat(chat)" id="chat{{i}}">
           <ion-row *ngIf="!chat.hidden" [ngClass]="chat.Selected ? 'no-padding bubble' : 'no-padding bubble transparent'" style="z-index:9999">
             <ion-col class="no-padding">
               <ion-text style="z-index:9999" *ngIf="!chat.Selected" [hidden]="chat.Hidden" ng-style="chat.Hidden === true ? height: '0px' : ''">{{chat.ShortText}}</ion-text>

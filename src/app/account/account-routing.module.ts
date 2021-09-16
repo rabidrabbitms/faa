@@ -17,6 +17,10 @@ import { accountInfoDetails } from './info/account.info.details';
 import { accountInfoDebit } from './info/account.info.debit';
 import { accountInfoBank } from './info/account.info.bank';
 import { accountInfoIncome } from './info/account.info.income';
+import { accountReferShare } from './account.refer.share';
+import { accountReferReferrals } from './account.refer.myreferrals';
+import { accountReferPayout } from './account.refer.payout';
+import { accountReferStatement } from './account.refer.statement';
 
 const routes: Routes = [
   {
@@ -54,6 +58,22 @@ const routes: Routes = [
   {
     path: 'refer',
     component: accountRefer
+  },
+  {
+    path: 'refer-share',
+    component: accountReferShare
+  },
+  {
+    path: 'refer-referrals',
+    component: accountReferReferrals
+  },
+  {
+    path: 'refer-payout',
+    component: accountReferPayout
+  },
+  {
+    path: 'refer-statement',
+    component: accountReferStatement
   },
   {
     path: 'coupons',

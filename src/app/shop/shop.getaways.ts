@@ -21,8 +21,6 @@ export class shopGetawaysPage implements OnInit {
     vid_link: "https://www.youtube.com/embed/c-EAcNXQ7N4?autoplay=1&enable_js=1" }]
 
 
-
-
   constructor(private animationCtrl: AnimationController,
     public alertController: AlertController, public navCtrl: NavController,
     private domSanitizer: DomSanitizer) {  }

@@ -14,9 +14,32 @@ export class shopPage implements OnInit {
     private animationCtrl: AnimationController,
     public alertController: AlertController
   ) { }
-
+  vacationImages = [
+    { img: '../assets/Vacations-1.jpg' },
+    { img: '../assets/Vacations-2.jpg' },
+    { img: '../assets/Vacations-3.jpg' },
+    { img: '../assets/Vacations-4.jpg' },
+    { img: '../assets/Vacations-5.jpg' },
+    { img: '../assets/Vacations-6.jpg' },
+    { img: '../assets/Vacations-7.jpg' },
+    { img: '../assets/Cruises-1.jpg' },
+    { img: '../assets/Cruises-2.jpg' },
+    { img: '../assets/Cruises-3.jpg' },
+    { img: '../assets/Cruises-4.jpg' },
+    { img: '../assets/Cruises-5.jpg' },
+    { img: '../assets/Cruises-6.jpg' }
+  ];
+  specialOffersImages = [
+    { img: '../assets/SpecialOffers-1.jpg' },
+    { img: '../assets/SpecialOffers-2.jpg' },
+    { img: '../assets/SpecialOffers-3.jpg' }
+  ];
+  specialOffersImage;
+  vacationsImage;
   ngOnInit() {
     //this.showAlert2();
+    this.specialOffersImage = this.specialOffersImages[Math.floor(Math.random() * this.specialOffersImages.length)];
+    this.vacationsImage = this.vacationImages[Math.floor(Math.random() * this.vacationImages.length)];
   }
 
 
