@@ -1,0 +1,1 @@
+export enum IssueType { Warning, Error }

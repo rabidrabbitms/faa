@@ -1,0 +1,66 @@
+﻿
+import AdverseAction from './AdverseAction';
+import Application from './application';
+import Contract from './Contract';
+import Customer from './Customer';
+import Loan from './Loan';
+import LoanRequestStatus from './LoanRequestStatus';
+import LoanType from './LoanType';
+import Model from './Model';
+import Offer from './Offer';
+import Option from './Option';
+import Payment from './Payment';
+import Rule from './Rule';
+import Selection from './Selection';
+import Selections from './selections';
+import Store from './Store';
+import User from './User';
+import { LoanTransaction } from './_import';
+
+export default LoanRequest;
+
+export interface LoanRequest extends Model {
+    Loan?: Loan;
+    Amount?: number;
+    Date?: Date;
+    CustomerID?: number;
+    Customer?: Customer;
+    PreviousLoanID?: number;
+    PreviousLoan?: Loan;
+    UserID?: number;
+    User?: User;
+    StoreID?: number;
+    Store?: Store;
+    LoanTypeID?: number;
+    LoanType?: LoanType;
+    ContractID?: number;
+    Contract?: Contract;
+    ESPLoanID?: number;
+    jsonApplication?: string;
+    jsonSelections?: string;
+    jsonOffer?: string;
+    Application?: Application;
+    HearAboutUs?: string;
+    Selections?: Selections;
+    LoanSelection?: Selection;
+    FundingSelection?: Selection[];
+    FundingMethod?: string;
+    FundingAmount?: number;
+    LoanOffer?: Offer;
+    PaymentSchedule?: Payment[];
+    FirstPayment?: Payment;
+    LastPayment?: Payment;
+    LoanOption?: Option;
+    LoanRule?: Rule;
+    AdverseActions?: AdverseAction[];
+    Statuses?: LoanRequestStatus[];
+    Status?: LoanRequestStatus;
+    Balances?: { [key: string]: any[]; };
+    LCCLFee?: number;
+    OriginationFee?: number;
+    DocumentationFee?: number;
+	FundedAmount?: number;
+    readonly FuturePayments?: LoanTransaction[];
+    readonly PaymentsToday?: LoanTransaction[];
+    readonly Pending?: boolean;
+}
