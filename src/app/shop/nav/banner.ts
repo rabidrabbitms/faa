@@ -13,11 +13,11 @@ export class Banner implements OnInit  {
   constructor(private location: Location, private animationCtrl: AnimationController, private router : Router) {}
 
   banners = [
-    {Name:'prequalify',     header: 'Pre-Qualify Me!',         body: `I want to know what I'm eligible for!`,   img: '../assets/Banner-Passport.svg',   animationType: 'rotate', link:'/tabs/tabs/shop/prequalify' },
-    {Name:'purchaseReady',  header: 'Purchase Is Ready!',      body: `Ready to be picked up.`,                  img: '../assets/Banner-Car.svg',        animationType: 'rightToLeft', link:'/tabs/tabs/account/purchases' },
-    { Name: 'vacationReady', header: 'Your Vacation Awaits', body: `Redeem your vacation now.`, img: '../assets/Banner-Ticket.svg', animationType: 'rotate', link:'/tabs/tabs/account/purchases'},
-    {Name:'processing',     header: 'Application Processing',  body: `We'll notify you when we are done.`,      img: '../assets/Banner-Looky.svg', animationType: 'rightToLeft', link:'' },
-    {Name:'refer-a-friend', header: 'Earn Extra Cash!',        body: `Invite your friends to join!`, img: '../assets/Banner-RAF.svg',        animationType: 'rightToLeft', link:'/tabs/tabs/account/refer' },
+    { Name: 'prequalify', header: 'Pre-Qualify Me!', body: `I want to know what I'm eligible for!`, img: '../assets/Banner-Passport.svg', animationType: 'rotate', link: '/tabs/tabs/shop/prequalify' },
+    { Name: 'purchaseReady', header: 'Purchase Is Ready!', body: `Ready to be picked up.`, img: '../assets/Banner-Car.svg', animationType: 'rightToLeft', link: '/tabs/tabs/account/purchases' },
+    { Name: 'vacationReady', header: 'Your Vacation Awaits', body: `Redeem your vacation now.`, img: '../assets/Banner-Ticket.svg', animationType: 'rotate', link: '/tabs/tabs/account/purchases' },
+    { Name: 'processing', header: 'Application Processing', body: `We'll notify you when we are done.`, img: '../assets/Banner-Looky.svg', animationType: 'rightToLeft', link: '' },
+    { Name: 'refer-a-friend', header: 'Earn Extra Cash!', body: `Invite your friends to join!`, img: '../assets/Banner-RAF.svg', animationType: 'rightToLeft', link: '/tabs/tabs/account/refer' },
   ];
   banner;
 
